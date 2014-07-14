@@ -13,3 +13,4 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 
 /node_modules/
+/wp-content/themes/jonasrev3/node_modules/
