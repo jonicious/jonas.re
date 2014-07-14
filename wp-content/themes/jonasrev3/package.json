@@ -1,0 +1,22 @@
+{
+	"name": "Jonas",
+	"description": "My website",
+	"version": "1.0.0",
+	"homepage": "http://jonas.re",
+	"devDependencies": {
+		"browser-sync": "~1.1.2",
+		"gulp": "~3.8.0",
+		"gulp-add-src": "~0.1.1",
+		"gulp-autoprefixer": "~0.0.7",
+		"gulp-concat": "~2.2.0",
+		"gulp-cssmin": "~0.1.5",
+		"gulp-imagemin": "^0.6.1",
+		"gulp-jshint": "~1.6.3",
+		"gulp-rename": "~1.2.0",
+		"gulp-sass": "~0.7.2",
+		"gulp-uglify": "~0.3.0",
+		"gulp-watch": "~0.6.6",
+		"imagemin-pngcrush": "^0.1.0",
+		"imagemin-jpegtran": "^0.1.0"
+	}
+}
