@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Jetpack Markdown v3.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-05-28 17:47:02+0000\n"
+"Last-Translator: Anas H. Sulaiman <ahs.pw>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: SAUDI ARABIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: markdown/easy-markdown.php:246
+#: markdown/easy-markdown.php:248
+#@ jetpack
+msgid "Markdown"
+msgstr "ماركداون"
+
+#: markdown/easy-markdown.php:271
+#@ jetpack
+msgid "Use Markdown for posts and pages."
+msgstr "استخدم ماركداون للتدوينات والصفحات."
+
+#: markdown/easy-markdown.php:272
+#: markdown/easy-markdown.php:287
+#@ jetpack
+msgid "Learn more about Markdown."
+msgstr "المزيد من المعلومات عن ماركدوان."
+
+#: markdown/easy-markdown.php:286
+#@ jetpack
+msgid "Use Markdown for comments."
+msgstr "استخدم ماركداون في التعليقات."
+
+#: markdown/easy-markdown.php:551
+#@ jetpack
+msgid "Markdown content"
+msgstr "محتوى ماركداون"
+
+#. translators: plugin header field 'Name'
+#: markdown.php:0
+#@ jetpack
+msgid "Jetpack Markdown"
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: markdown.php:0
+#@ jetpack
+msgid "Anas H. Sulaiman"
+msgstr "أنس هشام سليمان"
+
+#. translators: plugin header field 'AuthorURI'
+#: markdown.php:0
+#@ jetpack
+msgid "http://ahs.pw/"
+msgstr ""
+
+#: markdown.php:51
+#@ jetpack
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. translators: plugin header field 'PluginURI'
+#: markdown.php:0
+#@ jetpack
+msgid "http://wordpress.org/plugins/jetpack-markdown/"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: markdown.php:0
+#@ jetpack
+msgid "Write posts or pages in plain-text Markdown syntax."
+msgstr "اكتب مقالات وصفحات بنص عادي بصيغة ماركداون."
+
+#. translators: plugin header field 'Version'
+#: markdown.php:0
+#@ jetpack
+msgid "3.0.1"
+msgstr ""
+

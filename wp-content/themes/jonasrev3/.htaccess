@@ -1,0 +1,30 @@
+# BEGINN CACHIFY
+<IfModule mod_rewrite.c>
+	# ENGINE ON
+	RewriteEngine On
+ 
+	# GZIP FILE
+	<IfModule mod_mime.c>
+		RewriteCond %{REQUEST_URI} /$
+		RewriteCond %{REQUEST_URI} !^/wp-admin/.*
+		RewriteCond %{REQUEST_METHOD} !=POST
+		RewriteCond %{QUERY_STRING} =""
+		RewriteCond %{HTTP_COOKIE} !(wp-postpass|wordpress_logged_in|comment_author)_
+		RewriteCond %{HTTP:Accept-Encoding} gzip
+		RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/cachify/%{HTTP_HOST}%{REQUEST_URI}index.html.gz -f
+		RewriteRule ^(.*) /wp-content/cache/cachify/%{HTTP_HOST}%{REQUEST_URI}index.html.gz [L]
+ 
+		AddType text/html .gz
+		AddEncoding gzip .gz
+	</IfModule>	
+ 
+	# HTML FILE
+	RewriteCond %{REQUEST_URI} /$
+	RewriteCond %{REQUEST_URI} !^/wp-admin/.*
+	RewriteCond %{REQUEST_METHOD} !=POST
+	RewriteCond %{QUERY_STRING} =""
+	RewriteCond %{HTTP_COOKIE} !(wp-postpass|wordpress_logged_in|comment_author)_
+	RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/cachify/%{HTTP_HOST}%{REQUEST_URI}index.html -f
+	RewriteRule ^(.*) /wp-content/cache/cachify/%{HTTP_HOST}%{REQUEST_URI}index.html [L]
+</IfModule>
+# END CACHIFY
