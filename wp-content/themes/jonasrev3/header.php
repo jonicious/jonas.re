@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="de">
+<html lang="en">
 
 <head>
 	<title><?php wp_title(' - ', true, 'right'); ?> <?php bloginfo('name'); ?></title>
