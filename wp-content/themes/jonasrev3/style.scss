@@ -49,6 +49,16 @@ img {
 	height: auto;
 }
 
+h1, h2, h3, h4, p, ul, ol, blockquote, pre, code, nav, span {
+	.wf-loading & {
+		visibility: hidden;
+	}
+
+	.wf-active & {
+		visibility: visible;
+	}
+}
+
 /* Icon Font */
 
 @font-face {
