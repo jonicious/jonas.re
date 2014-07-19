@@ -9,8 +9,8 @@
 	<meta name="viewport" content="width=device-width">
 	<script type="text/javascript" src="//use.typekit.net/ucj6yws.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-	<link rel="icon" type="image/png" href="http://jonas.re/wp-content/themes/jonasrev3/assets/profile.png" />
+	<link rel="stylesheet" href="../wp-content/themes/jonasrev3/style.css" type="text/css" media="screen" />
+	<link rel="icon" type="image/png" href="../wp-content/themes/jonasrev3/assets/profile.png" />
 	
 	<!-- Facebook -->
 	 
