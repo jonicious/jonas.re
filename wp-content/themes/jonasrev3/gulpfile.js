@@ -16,11 +16,13 @@ var	gulp			= require('gulp'),
 	jpegtran		= require('imagemin-jpegtran');
  
 gulp.task('browser-sync', function() {  
-	browserSync.init(["./*.css", "./*.js", "./*.html"], {
-    	server: {
-        	baseDir: "./"
-		}
+	browserSync.init(["*.scss", "./*.js", "./*.html", "./*.php"], {
+		proxy: "http://localhost:8888",
 	});
+});
+
+gulp.task('bs-reload', function () {
+	browserSync.reload();
 });
  
 gulp.task('images', function () {
@@ -42,7 +44,8 @@ gulp.task('sass', function() {
 });
  
 gulp.task('js', function() {
-	gulp.src('./js/main.js')
+	gulp.src('./js/jquery.js')
+		.pipe(addsrc('./js/*.js'))
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'))
 		.pipe(concat('script.min.js'))
@@ -53,6 +56,6 @@ gulp.task('js', function() {
 gulp.task('build', ['sass', 'js']);
  
 gulp.task('watch', ['sass', 'browser-sync', 'js'], function () {  
-	gulp.watch("style.scss", ['sass']);
+	gulp.watch("*.scss", ['sass']);
 	gulp.watch("./js/main.js", ['js']);
 });
