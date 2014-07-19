@@ -45,9 +45,9 @@ gulp.task('sass', function() {
  
 gulp.task('js', function() {
 	gulp.src('./js/jquery.js')
-		.pipe(addsrc('./js/*.js'))
+		.pipe(addsrc('./js/main.js'))
 		.pipe(jshint())
-		.pipe(jshint.reporter('default'))
+		// .pipe(jshint.reporter('default'))
 		.pipe(concat('script.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./js'));
