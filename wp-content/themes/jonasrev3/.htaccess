@@ -28,3 +28,23 @@
 	RewriteRule ^(.*) /wp-content/cache/cachify/%{HTTP_HOST}%{REQUEST_URI}index.html [L]
 </IfModule>
 # END CACHIFY
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 1 month 1 days"
+	ExpiresByType text/html "access plus 1 month 1 days"
+	ExpiresByType image/gif "access plus 1 month 1 days"
+	ExpiresByType image/jpeg "access plus 1 month 1 days"
+	ExpiresByType image/png "access plus 1 month 1 days"
+	ExpiresByType text/css "access plus 1 month 1 days"
+	ExpiresByType text/javascript "access plus 1 month 1 week"
+	ExpiresByType application/x-javascript "access plus 1 month 1 days"
+	ExpiresByType text/xml "access plus 1 seconds"
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml
+    AddOutputFilterByType DEFLATE text/css text/javascript
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+</IfModule>
