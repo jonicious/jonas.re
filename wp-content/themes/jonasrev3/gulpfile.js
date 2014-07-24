@@ -46,6 +46,8 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
 	gulp.src('./js/jquery.js')
 		.pipe(addsrc('./js/main.js'))
+		.pipe(addsrc('./js/FitVids.js'))
+		.pipe(addsrc('./js/prism.js'))
 		.pipe(jshint())
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('script.min.js'))
