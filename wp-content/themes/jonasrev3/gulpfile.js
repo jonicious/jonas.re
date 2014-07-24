@@ -35,12 +35,12 @@ gulp.task('images', function () {
 });
  
 gulp.task('sass', function() {
-	gulp.src('style.scss')
-		.pipe(sass())
+	gulp.src('scss/global.scss')
+		.pipe(sass({errLogToConsole: true}))
 		.pipe(autoprefixer("last 2 version", "ie 9"))
 		.pipe(cssmin())
 		.pipe(rename('style.css'))
-		.pipe(gulp.dest('.'))
+		.pipe(gulp.dest('./'))
 });
  
 gulp.task('js', function() {
