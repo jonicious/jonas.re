@@ -55,6 +55,17 @@ h1, h2, h3, h4, p, ul, ol, blockquote, pre, code, nav, span, .profile-pic, li {
 	}
 }
 
+noscript {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background: #B33A3A;
+	padding: 10px 0;
+	color: #FFF;
+}
+
 /* Icon Font */
 
 @font-face {
