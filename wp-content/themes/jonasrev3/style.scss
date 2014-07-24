@@ -18,9 +18,7 @@ Tags: I, am, so, awesome, motherfucker.
 	font-family: "source-sans-pro", "Helvetica", sans-serif;
 }
 
-$black: #2f2f2f;
-$gray: #666666;
-$blue: #296b87;
+@import "scss/colors.scss";
 
 body, html {
 	@include source-sans-pro;
