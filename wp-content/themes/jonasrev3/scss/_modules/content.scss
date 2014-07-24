@@ -1,0 +1,92 @@
+.content {
+	@include container;
+	padding: 10px 0 30px 0;
+}
+
+article {
+	margin: 50px 0;
+	width: 100%;
+	color: $gray;
+	font-size: 18px;
+	line-height: 29px;
+	
+	.post-headline {
+		float: left;
+		margin: 0 0 10px 0;
+		width: 70%;
+		font-size: 26px;
+		
+		a {
+			color: $black;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	.date,
+	.date a {
+		float: right;
+		margin-top: 2px;
+		color: $gray;
+		text-transform: none;
+		letter-spacing: 1px;
+		font-weight: 400;
+		font-size: 16px;
+		
+		&:hover {
+			text-decoration: none;
+		}
+		
+		@media screen and (max-width: 650px) {
+			float: left;
+			clear: both;
+			margin-top: -5px;
+		}
+	}
+	
+	p {
+		clear: both;
+	}
+	
+	strong {
+		color: darken($gray, 30%);
+	}
+	
+	code {
+		font-size: 15px;
+		background: #e9e9e9;
+		padding: 3px;
+		border-radius: 4px;
+	}
+	
+	li {
+		margin-bottom: 10px;
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	blockquote {
+		padding: 0 0 0 10px;
+		border-left: 5px solid $black;
+	}
+	
+	h3 {
+		color: $black;
+		text-transform: uppercase;
+		letter-spacing: 1.3px;
+		font-size: 17px;
+	}
+	
+	a {
+		color: $black;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,160 @@
+noscript {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background: #B33A3A;
+	padding: 10px 0;
+	color: #FFF;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	height: 350px;
+	background: url(assets/background.png);
+	background-position: top;
+	background-size: cover;
+}
+
+.header-container {
+	@include container;
+	padding: 10px 0 0 0;
+	
+	.profile-pic {
+		display: block;
+		margin: 80px auto 0 auto;
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		background: url(assets/profile.png);
+		background-position: center top;
+		animation-name: bounceInDown;
+		
+		@media only screen and (-webkit-min-device-pixel-ratio: 2),
+			   only screen and (   min--moz-device-pixel-ratio: 2),
+			   only screen and (     -o-min-device-pixel-ratio: 2/1),
+			   only screen and (        min-device-pixel-ratio: 2) {
+
+			       background: url(http://jonas.re/wp-content/themes/jonasrev3/assets/profile-large.png);
+				   display: block;
+				   background-size: cover;
+			  }
+	}
+	
+	.name {
+		text-align: center;
+		font-weight: 400;
+		font-size: 20px;
+		
+		a {
+			color: white;
+		}
+	}
+	
+	.header-nav {
+		position: relative;
+		margin: 90px auto 0 auto;
+		border-top: 2px solid #b1b8c2;
+	
+		ul {
+			float: left;
+			margin-top: 0px;
+			padding-top: 8px;
+			padding-left: 0;
+			
+			li {
+				display: inline;
+				margin-left: 20px;
+				padding: 10px 0;
+				color: #d6d6d6;
+				text-transform: uppercase;
+				letter-spacing: 1.4px;
+				font-weight: 700;
+				font-size: 14px;
+				cursor: pointer;
+				
+				&:hover {
+					border-top: 2px solid #fff;
+				}
+				
+				a {
+					color: #ededed;
+				}
+				
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+			
+			.current_page_item {
+				border-top: 2px solid #fff;
+			}
+		}
+		
+		.search {
+			float: right;
+			margin-bottom: -22px;
+			margin-top: 8px;
+		}
+		
+		.x {
+			display: none;
+			float: left;
+			margin: -8px 0 0 10px;
+			cursor: pointer;
+			font-size: 25px;
+			color: white;
+		}
+		
+		#search {
+			display: none;
+			float: left;
+			
+			input {
+				border-radius: 0;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				border: none;
+				outline: none;
+				font-size: 13px;
+				background: transparent;
+				color: white;
+				margin-right: -14px;
+			}
+			
+			::-webkit-input-placeholder {
+				color: white;
+				font-weight: 400;
+			}
+		
+			:-moz-placeholder { 
+			   color: white; /* Firefox 18- */
+			   font-weight: 400;
+			}
+			
+			::-moz-placeholder {  
+			   color: white;  /* Firefox 19+ */
+			   font-weight: 400;
+			}
+			
+			:-ms-input-placeholder { 
+			   color: white;  
+			   font-weight: 400;
+			}
+		}		
+		
+		.icon-search {
+			float: right;
+			color: white;
+			margin-top: 8px;
+			font-size: 16px !important;
+			cursor: pointer;
+			
+			@media screen and (max-width: 400px) {
+				display: none;
+			}
+		}
+	}
+}

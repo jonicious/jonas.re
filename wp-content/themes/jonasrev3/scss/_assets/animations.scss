@@ -1,0 +1,30 @@
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes bounceInDown {
+	0% {
+    	opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+
+	60% {
+    	opacity: 1;
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+	}
+
+	80% {
+    	-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	100% {
+    	-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
