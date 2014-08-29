@@ -14,10 +14,12 @@
 	
 	<hr class="seperator">
 	
-	<div class="sharing">
-		<i class="icon-uniF610"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"></a></i>
-		<i class="icon-uniF611"><a title="<?php the_title(); ?>" href="http://twitter.com/home/?status=<?php the_permalink(); ?> via @jonicious" target="_blank" rel="nofollow"></a></i>
-		<i class="icon-uniF613"><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>"</a></i>
+	
+	<div style="width: 150px; margin: 0 auto 20px auto; display: block;">
+		
+	<a href="https://twitter.com/jonicious" class="twitter-follow-button" style="width: 150px; margin: 0 auto !important; display: block !important;" data-show-count="false" data-size="large" data-dnt="true">Follow @jonicious</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	
 	</div>
 		
 	<?php endwhile; ?>
