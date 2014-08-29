@@ -10,10 +10,7 @@
 	<article>
 		<h2 class="post-headline"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 		<?php the_content(); ?>
-	</article>
-	
-	<hr class="seperator">
-	
+	</article>	
 	
 	<div style="width: 150px; margin: 0 auto 20px auto; display: block;">
 		
