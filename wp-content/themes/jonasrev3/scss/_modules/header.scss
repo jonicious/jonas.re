@@ -120,10 +120,11 @@ header {
 		.x {
 			display: none;
 			float: left;
-			margin: -8px 0 0 10px;
+			margin: 0px 0 0 10px;
 			cursor: pointer;
-			font-size: 25px;
-			color: white;
+			font-size: 19px;
+			font-weight: bold;
+			color: #fff;
 		}
 		
 		#search {
@@ -166,7 +167,7 @@ header {
 		.icon-search {
 			float: right;
 			color: white;
-			margin-top: 8px;
+			margin-top: 13px;
 			font-size: 16px !important;
 			cursor: pointer;
 			
