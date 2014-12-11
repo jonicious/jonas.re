@@ -39,6 +39,7 @@ gulp.task('sass', function() {
 		.pipe(cssmin())
 		.pipe(rename('style.css'))
 		.pipe(gulp.dest('./'))
+		.pipe(browserSync.reload({stream:true}));
 });
  
 gulp.task('js', function() {
@@ -50,12 +51,12 @@ gulp.task('js', function() {
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('script.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('./js'));
+		.pipe(gulp.dest('./js'))
 });
  
 gulp.task('build', ['sass', 'js']);
  
 gulp.task('watch', ['sass', 'browser-sync', 'js'], function () {  
-	gulp.watch("*.scss", ['sass']);
+	gulp.watch("*/**/*.scss", ['sass']);
 	gulp.watch("./js/main.js", ['js']);
 });
