@@ -40,17 +40,16 @@
 <body>
 
 <header>
-	<div class="header-container">
-		<a class="animated bounceInDown profile-pic" href="/"></a>
-		<h2 class="name"><a href="/">Jonas Reitmann</a></h2>
-		
-		<nav class="header-nav">
-			<?php wp_nav_menu(); ?>
-
-			<span class="icon-search"></span>
-			<div class="search">
-				<?php get_search_form(); ?>
-			</div>
-		</nav>
+  <a class="profile-pic" href="/"></a>
+  
+  <div class="text">
+  	<h2>Hi, ich bin Jonas Reitmann.</h2>
+  
+	  <h4>
+	    Ich arbeite bei <a href="#">mytaxi</a>, wo ich eine Ausbildung zum Entwickler mache. Man kann mir auf <a href="http://twitter.com/jonicious">Twitter folgen</a> oder mir eine <a href="mailto:jonas@reitmann.me">Mail schreiben</a>. 
+	  </h4>
 	</div>
+
+	<?php wp_nav_menu( array('container' => 'nav' )); ?>
+  
 </header>

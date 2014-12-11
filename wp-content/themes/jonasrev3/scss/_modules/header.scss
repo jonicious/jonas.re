@@ -11,169 +11,71 @@ noscript {
 
 header {
 	position: relative;
-	width: 100%;
-	height: 350px;
-	background: url(assets/background.png);
-	background-position: top;
-	background-size: cover;
-}
+  @include container;
+  margin-top: 5%;
 
-.header-container {
-	@include container;
-	padding: 10px 0 0 0;
-	
-	.profile-pic {
-		display: block;
-		margin: 80px auto 0 auto;
-		width: 80px;
-		height: 80px;
-		border-radius: 100%;
-		background: url(assets/profile.png);
-		background-position: center top;
-		animation-name: bounceInDown;
-		
-		@media only screen and (-webkit-min-device-pixel-ratio: 2),
-			   only screen and (   min--moz-device-pixel-ratio: 2),
-			   only screen and (     -o-min-device-pixel-ratio: 2/1),
-			   only screen and (        min-device-pixel-ratio: 2) {
+  .profile-pic {
+    float: left;
+    margin-left: -80px;
+    background: url(assets/profile.png);
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    border-radius: 100%;
+    display: block;
+  }
 
-			       background: url(http://jonas.re/wp-content/themes/jonasrev3/assets/profile-large.png);
-				   display: block;
-				   background-size: cover;
-			  }
-	}
-	
-	.name {
-		text-align: center;
-		font-weight: 400;
-		font-size: 20px;
-		
-		a {
-			color: white;
-		}
-	}
-	
-	.header-nav {
-		position: relative;
-		margin: 90px auto 0 auto;
-		border-top: 2px solid #b1b8c2;
-	
-		ul {
-			float: left;
-			margin-top: 0px;
-			padding-top: 8px;
-			padding-left: 0;
-			
-			li {
-				position: relative;
-				display: inline;
-				margin-left: 20px;
-				color: #d6d6d6;
-				text-transform: uppercase;
-				letter-spacing: 1.4px;
-				font-weight: 700;
-				font-size: 14px;
-				cursor: pointer;
-				
-				&:after {
-					position: absolute;
-					content: '';
-					height: 2px;
-					background: white;
-					top: -12px;
-					left: 0;
-					right: 0;
-					visibility: hidden;
-					transition: all 250ms cubic-bezier(0.325, -0.075, 0, 1.65);
-					transform: scaleX(0);
-				}
-				
-				&:hover {
-					&:after {
-						visibility: visible;
-						transition: all 350ms cubic-bezier(0.325, -0.045, 0, 1.65);
-						transform: scaleX(1);
-					}
-				}
-				
-				a {
-					color: #ededed;
-				}
-				
-				&:first-child {
-					margin-left: 0;
-				}
-			}
-			
-			.current_page_item, .current_page_item:after {
-				visibility: visible !important;
-				transform: scaleX(1) !important;
-			}
-		}
-		
-		.search {
-			float: right;
-			margin-bottom: -22px;
-			margin-top: 8px;
-		}
-		
-		.x {
-			display: none;
-			float: left;
-			margin: 0px 0 0 10px;
-			cursor: pointer;
-			font-size: 19px;
-			font-weight: bold;
-			color: #fff;
-		}
-		
-		#search {
-			display: none;
-			float: left;
-			
-			input {
-				border-radius: 0;
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				border: none;
-				outline: none;
-				font-size: 13px;
-				background: transparent;
-				color: white;
-				margin-right: -14px;
-			}
-			
-			::-webkit-input-placeholder {
-				color: white;
-				font-weight: 400;
-			}
-		
-			:-moz-placeholder { 
-			   color: white; /* Firefox 18- */
-			   font-weight: 400;
-			}
-			
-			::-moz-placeholder {  
-			   color: white;  /* Firefox 19+ */
-			   font-weight: 400;
-			}
-			
-			:-ms-input-placeholder { 
-			   color: white;  
-			   font-weight: 400;
-			}
-		}		
-		
-		.icon-search {
-			float: right;
-			color: white;
-			margin-top: 13px;
-			font-size: 16px !important;
-			cursor: pointer;
-			
-			@media screen and (max-width: 400px) {
-				display: none;
-			}
-		}
-	}
+  .text {
+    float: left;
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    h4 {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 30px;
+      color: $light-gray;
+      margin-top: 10px;
+
+      a {
+        color: #0f0f0f;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  .menu-header-container {
+    
+    ul {
+      padding: 0;
+      
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        
+        &:last-child {
+          margin-right: 0;
+        }
+        
+        a {
+          color: #4e4e4e;
+          
+          &:hover {
+            color: $dark-gray;
+          }
+        }
+      }
+    }
+  }
 }
