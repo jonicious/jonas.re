@@ -7,7 +7,7 @@
 	
 	<article>
 		<h2 class="post-headline"><?php the_title(); ?></h2>
-		<h3 class="date"><?php the_date(); ?></h3>
+		<h4 class="date"><?php the_date(); ?></h4>
 		<?php the_content(); ?>
 	</article>
 		

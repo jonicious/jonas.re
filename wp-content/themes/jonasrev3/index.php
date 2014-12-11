@@ -7,8 +7,8 @@
 	
 		<article>
 			<h2 class="post-headline"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-			<h3 class="date"><a href="<?php the_permalink();?>"><?php the_date(); ?></a></h3>
-			<p><?php the_excerpt(); ?></p>
+			<h4 class="date"><a href="<?php the_permalink(); ?>"><?php the_date(); ?></a></h4>
+      <p><?php the_excerpt(); ?></p>
 		</article>
 	
 	<?php endwhile; ?>
