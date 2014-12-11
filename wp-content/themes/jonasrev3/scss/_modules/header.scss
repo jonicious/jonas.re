@@ -23,6 +23,10 @@ header {
     background-size: cover;
     border-radius: 100%;
     display: block;
+    
+    @media screen and (max-width: 750px) {
+      margin-left: 0;
+    }
   }
 
   .text {
@@ -31,7 +35,12 @@ header {
     h2 {
       font-size: 22px;
       font-weight: 400;
-      margin-top: 10px;
+      margin-top: 12px;
+      
+      @media screen and (max-width: 750px) {
+        margin-left: 80px;
+        margin-top: -48px;
+      }
     }
 
     h4 {
@@ -39,7 +48,11 @@ header {
       font-size: 17px;
       line-height: 30px;
       color: $light-gray;
-      margin-top: 10px;
+      margin-top: 15px;
+      
+      @media screen and (max-width: 750px) {
+        margin-top: 30px;
+      }
 
       a {
         color: #0f0f0f;
@@ -53,13 +66,16 @@ header {
   
   .menu-header-container {
     
+    display: table;
+    clear: both;
+    
     ul {
       padding: 0;
       
       li {
         display: inline-block;
         margin-right: 10px;
-        margin-top: 10px;
+        margin-top: 15px;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 14px;
