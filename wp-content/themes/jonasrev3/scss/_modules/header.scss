@@ -17,14 +17,13 @@ header {
   .profile-pic {
     float: left;
     margin-left: -80px;
-    background: url(assets/profile.png);
+    background: url(assets/profile.png) center center;
     height: 60px;
     width: 60px;
     background-size: cover;
     border-radius: 100%;
-    display: block;
     
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 800px) {
       margin-left: 0;
     }
   }
@@ -37,7 +36,7 @@ header {
       font-weight: 400;
       margin-top: 12px;
       
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 800px) {
         margin-left: 80px;
         margin-top: -48px;
       }
@@ -50,7 +49,7 @@ header {
       color: $light-gray;
       margin-top: 15px;
       
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 800px) {
         margin-top: 30px;
       }
 
@@ -88,7 +87,7 @@ header {
           color: #4e4e4e;
           
           &:hover {
-            color: $dark-gray;
+            color: darken(#4e4e4e, 30%);
           }
         }
       }
