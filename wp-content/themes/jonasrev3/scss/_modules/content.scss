@@ -82,4 +82,24 @@ article {
 			text-decoration: underline;
 		}
 	}
+	
+	.back-btn {
+  	text-align: center;
+  	display: block;
+  	margin: 60px auto 0 auto;
+  	width: 200px;
+  	border-radius: 25px;
+  	padding: 6px;
+  	border: 2px solid $light-gray;
+  	text-transform: uppercase;
+  	color: $light-gray;
+  	font-size: 14px;
+  	font-weight: bold;
+  	
+  	&:hover {
+    	background: $light-gray;
+    	color: white;
+    	text-decoration: none;
+  	}
+	}
 }

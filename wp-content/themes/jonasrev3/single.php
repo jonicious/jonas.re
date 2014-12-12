@@ -9,6 +9,7 @@
 		<h2 class="post-headline"><?php the_title(); ?></h2>
 		<h4 class="date"><?php the_date(); ?></h4>
 		<?php the_content(); ?>
+		<a href="/" class="back-btn">Zurück</a>
 	</article>
 		
 	<?php endwhile; ?>
