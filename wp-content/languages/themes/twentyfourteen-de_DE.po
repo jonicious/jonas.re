@@ -38,12 +38,13 @@ msgstr "Mehr Galerien"
 msgid "More asides"
 msgstr "Mehr Kurzmitteilungen"
 
+#. translators: used with More archives link
 #: inc/widgets.php:206
 msgid "%s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%s <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/customizer.php:37 inc/customizer.php:102 inc/featured-content.php:410
-#: inc/featured-content.php:419 inc/featured-content.php:479
+#: inc/customizer.php:37 inc/customizer.php:102 inc/featured-content.php:407
+#: inc/featured-content.php:416 inc/featured-content.php:476
 msgctxt "featured content default tag slug"
 msgid "featured"
 msgstr "featured"
@@ -52,10 +53,11 @@ msgstr "featured"
 msgid "Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts."
 msgstr "Nutze dieses Widget, um die letzten Kurzmitteilungen, Zitate, Videos, Audios, Bilder, Galerien und Links aufzulisten."
 
+#. Theme URI of the plugin/theme
 msgid "http://wordpress.org/themes/twentyfourteen"
 msgstr "http://wordpress.org/themes/twentyfourteen"
 
-#: inc/customizer.php:36 inc/featured-content.php:409
+#: inc/customizer.php:36 inc/featured-content.php:406
 msgid "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr "Verwende ein <a href=\"%1$s\">Schlagwort</a>, um deinen Beitrag hervorzuheben. Wenn kein Beitrag dem Schlagwort entspricht, werden statt dessen <a href=\"%2$s\">oben gehaltene Beiträge</a> angezeigt."
 
@@ -85,14 +87,15 @@ msgstr "Y"
 msgid "Site Title Color"
 msgstr "Farbe Webseitentitel "
 
-#: inc/featured-content.php:431
+#: inc/featured-content.php:428
 msgid "Tag Name"
 msgstr "Schlagwort-Bezeichnung"
 
-#: inc/featured-content.php:436
+#: inc/featured-content.php:433
 msgid "Don&rsquo;t display tag on front end."
 msgstr "Schlagwort nicht auf der Webseite anzeigen."
 
+#. Description of the plugin/theme
 msgid "In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier."
 msgstr "In 2014 lässt dich unser Standard-Theme eine adaptive Magazin-Website mit einem schnittigen, modernen Design erstellen. Präsentiere deine wichtigsten Beiträge entweder in einem Raster oder einem Slider. Passe deine Website mit drei Widget-Bereichen an deine Bedürfnisse an und verändere das Layout deiner Inhalte mit einem Autoren Template einer Seiten-Template über die gesamte Breite."
 
@@ -153,7 +156,7 @@ msgstr "Twenty Fourteen setzt mindestens WordPress Version 3.6 voraus. Du nutzt 
 msgid "Background may only be visible on wide screens."
 msgstr "Der Hintergrund ist möglicherweise nur auf breiteren Bildschirmen sichtbar."
 
-#: inc/customizer.php:35 inc/featured-content.php:408
+#: inc/customizer.php:35 inc/featured-content.php:405
 msgid "Featured Content"
 msgstr "Hervorgehobener Inhalt"
 
@@ -173,19 +176,19 @@ msgstr "Slider"
 msgid "Enhance your site design by using <a href=\"%s\">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Twenty Fourteen uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page."
 msgstr "Mit <a href=\"%s\">Beitragsbildern</a> kannst du die Gestaltung deiner Website aufwerten. So lässt sich einem Beitrag ein Bild zuordnen, ohne es einzufügen. Twenty Fourteen nutzt Beitragsbilder für Beiträge und Seiten &ndash; oberhalb des Titels &ndash; und im Bereich für hervorgehobene Inhalte auf der Startseite."
 
-#: inc/template-tags.php:53
+#: inc/template-tags.php:58
 msgid "Posts navigation"
 msgstr "Beitrags-Navigation"
 
-#: inc/template-tags.php:84
+#: inc/template-tags.php:89
 msgid "<span class=\"meta-nav\">Published In</span>%title"
 msgstr "<span class=\"meta-nav\">Veröffentlicht in</span>%title"
 
-#: inc/template-tags.php:86
+#: inc/template-tags.php:91
 msgid "<span class=\"meta-nav\">Previous Post</span>%title"
 msgstr "<span class=\"meta-nav\">Vorheriger Beitrag</span>%title"
 
-#: inc/template-tags.php:87
+#: inc/template-tags.php:92
 msgid "<span class=\"meta-nav\">Next Post</span>%title"
 msgstr "<span class=\"meta-nav\">Nächster Beitrag</span>%title"
 
@@ -215,6 +218,7 @@ msgstr "Anzahl der Beiträge, die angezeigt werden sollen:"
 msgid "Post format to show:"
 msgstr "Formatvorlage, die genutzt werden soll:"
 
+#. Template Name of the plugin/theme
 msgid "Contributor Page"
 msgstr "Autoren Seite"
 
@@ -301,6 +305,8 @@ msgstr "% Kommentare"
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.2)  #-#-#-#-#
+#. Author URI of the plugin/theme
 #: footer.php:21
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
@@ -334,7 +340,7 @@ msgctxt "Lato font: on or off"
 msgid "on"
 msgstr "on"
 
-#: functions.php:488
+#: functions.php:491
 msgid "Page %s"
 msgstr "Seite %s"
 
@@ -350,19 +356,19 @@ msgstr "Primäres Menü"
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: inc/template-tags.php:80
+#: inc/template-tags.php:85
 msgid "Post navigation"
 msgstr "Beitragsnavigation"
 
-#: inc/template-tags.php:45
+#: inc/template-tags.php:50
 msgid "&larr; Previous"
 msgstr "&larr; Zurück"
 
-#: inc/template-tags.php:46
+#: inc/template-tags.php:51
 msgid "Next &rarr;"
 msgstr "Weiter &rarr;"
 
-#: inc/template-tags.php:104
+#: inc/template-tags.php:109
 msgid "Sticky"
 msgstr "Sticky"
 
@@ -414,12 +420,16 @@ msgstr "Zitate"
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.2)  #-#-#-#-#
+#. Theme Name of the plugin/theme
 #: inc/customizer.php:99
 msgid "Twenty Fourteen"
 msgstr "Twenty Fourteen"
 
+#. Author of the plugin/theme
 msgid "the WordPress team"
 msgstr "das WordPress Team"
 
+#. Template Name of the plugin/theme
 msgid "Full Width Page"
 msgstr "Seite mit voller Breite"
