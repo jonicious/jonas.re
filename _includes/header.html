@@ -1,0 +1,23 @@
+<header>
+  <a class="profile-pic" href="/"></a>
+
+  <div class="text">
+    <h2>Hi, ich bin Jonas Reitmann.</h2>
+
+    <h4>
+      Ich arbeite bei <a href="#">mytaxi</a>, wo ich eine Ausbildung zum Entwickler mache. Man kann mir auf <a href="http://twitter.com/jonicious">Twitter folgen</a> oder mir eine <a href="mailto:jonas@reitmann.me">Mail schreiben</a>.
+    </h4>
+  </div>
+
+  <nav class="menu-header-container">
+    <ul>
+      {% for page in site.pages %}
+        {% if page.title %}
+          <li>
+            <a href="href="{{ page.url | prepend: site.baseurl }}"">{{ page.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
