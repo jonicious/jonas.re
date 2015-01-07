@@ -1,0 +1,15 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "_assets/mixins.scss";
+@import "_assets/fonts.scss";
+@import "_assets/reset";
+@import "_assets/colors";
+@import "_assets/animations";
+@import "_assets/syntax-highlighter";
+
+@import "_modules/header";
+
+@import "_modules/content";

@@ -1,0 +1,40 @@
+body, html {
+	@include source-sans-pro;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2, h3, h4, p, ul, ol, blockquote, pre, code, nav, span, .profile-pic, li {
+	
+	.wf-loading & {
+		visibility: hidden;
+	}
+
+	.wf-active & {
+		visibility: visible;
+	}
+}
