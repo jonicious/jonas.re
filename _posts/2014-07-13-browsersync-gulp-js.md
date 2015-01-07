@@ -59,4 +59,4 @@ In our example, by using `gulp watch`, we also start the tasks `sass`, `browser-
 
 To my mind, this is a great workflow, especially when your site is responsive (which should be the case) and you need to test it on several devices.
 
-By the way, you can find my whole <a href="https://gist.github.com/jonicious/b16b594a37f5827f5fa0" taget"_blank">gulpfile.js here</a> and my <a href="https://gist.github.com/jonicious/cfa3a37edb3e5735fc02" target="_blank">package.json here</a>.
+By the way, you can find my whole <a href="https://gist.github.com/jonicious/b16b594a37f5827f5fa0" taget="_blank">gulpfile.js here</a> and my <a href="https://gist.github.com/jonicious/cfa3a37edb3e5735fc02" target="_blank">package.json here</a>.
