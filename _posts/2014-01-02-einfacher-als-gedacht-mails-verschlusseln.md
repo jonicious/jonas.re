@@ -17,7 +17,7 @@ S/MIME ist ein Standard, der in den meisten Mail Clients integriert, z.B. Mail.a
 
 Bei Gmail sieht es so aus, wenn man verschlüsselte Mails bekommt. **Die Mail ist wirklich nur im Client auf dem Computer lesbar.**
 
-[<img class="alignnone size-full wp-image-20" src="http://jonas.re/wp-content/uploads/2014/04/gmail.png" alt="gmail" width="520" height="335" data-responsive="20" />][2]
+[<img class="alignnone size-full wp-image-20" src="/images/gmail.png" alt="gmail" width="520" height="335" data-responsive="20" />][2]
 
 Eine Alternative zu S/MIME wäre PGP. Der Nachteil ist jedoch, dass PGP in den wenigsten Mail Clients verbaut ist, deswegen zusätzliche Programme benötigt werden und dies den ganzen Aufwand erhöht. **S/MIME und PGP wurden noch nicht geknackt, von daher sind es sehr sichere Standards.**
 
@@ -42,7 +42,7 @@ Nach Installation des Zertifikats im Schlüsselbund, einfach Apple Mail schließ
 
 Und so sieht dann eine angekommene Mail aus.
 
-[<img class="alignnone size-full wp-image-23" src="http://jonas.re/wp-content/uploads/2014/04/mac-mail-received.png" alt="mac-mail-received" width="742" height="178" data-responsive="23" />][7]
+[<img class="alignnone size-full wp-image-23" src="/images/mac-mail-received.png" alt="mac-mail-received" width="742" height="178" data-responsive="23" />][7]
 
 ### iOS (Apple Mail)
 
@@ -53,11 +53,11 @@ In der Schlüsselbund Verwaltung einfach nach eurer Mail Adresse suchen und das 
 
 Unter &#8220;Mail, Kontakte, Kalender&#8221; -> [euer Mail Account] -> &#8220;Account&#8221; -> &#8220;Erweitert&#8221; unten S/MIME aktivieren und unter &#8220;Signieren&#8221; und &#8220;Verschlüsseln&#8221; das Zertifikat auswählen.
 
-[<img class="alignnone size-full wp-image-21" src="http://jonas.re/wp-content/uploads/2014/04/ios-screenshots.png" alt="ios-screenshots" width="1280" height="500" data-responsive="21" />][9]
+[<img class="alignnone size-full wp-image-21" src="/images/ios-screenshots.png" alt="ios-screenshots" width="1280" height="500" data-responsive="21" />][9]
 
 Beim Senden sieht es dann so aus.
 
-[<img class="alignnone size-full wp-image-25" src="http://jonas.re/wp-content/uploads/2014/04/send-iOS.png" alt="send-iOS" width="645" height="540" data-responsive="25" />][10]
+[<img class="alignnone size-full wp-image-25" src="/images/send-iOS.png" alt="send-iOS" width="645" height="540" data-responsive="25" />][10]
 
 ### Fazit
 

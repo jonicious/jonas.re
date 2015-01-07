@@ -96,7 +96,7 @@ Da trotz `picture` und `srcset` der Browser ein `img` interpretiert, muss im CSS
 
 Viele verwenden WordPress und es gibt schon einige Plugins, um Responsive Images leicht und mit wenig Aufwand zu ermöglichen. Ich nutze <a title="Responsive Images Plugin" href="https://github.com/elf02/elf02-WP-Responsive-Images---WordPress-Plugin" target="_blank">dieses</a> Plugin. Es nutzt das `img` Element mit `srcset`, funktioniert einwandfrei und ist leicht zu konfigurieren.
 
-<img class="alignnone size-full wp-image-144" src="http://jonas.re/wp-content/uploads/2014/05/Screen-Shot-2014-05-19-at-15.39.32.png" alt="Screen Shot 2014-05-19 at 15.39.32" width="656" height="650" data-responsive="144" />
+<img class="alignnone size-full wp-image-144" src="/images/Screen-Shot-2014-05-19-at-15.39.32.png" alt="Screen Shot 2014-05-19 at 15.39.32" width="656" height="650" data-responsive="144" />
 
 Nach der Installation ist das Plugin unter &#8220;Einstellungen -> Responsive Images&#8221; zu konfigurieren. Dort können die verschiedenen Bildgrößen und Breakpoints definiert werden. Das Plugin erzeugt beim Upload neuer Bilder direkt die von euch gewünschten Größen.
 

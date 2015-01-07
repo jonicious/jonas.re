@@ -55,7 +55,7 @@ But ideally, you start a gulp task once and then let gulp handle the rest for yo
 
 In our example, by using `gulp watch`, we also start the tasks `sass`, `browser-sync`, `html-build` and `js`. To start a task once and then let gulp watch for changes, we just use `gulp.watch()`. For example, when `style.scss` changes, the task `sass` automatically starts and does its job.
 
-<img data-responsive="199" src="http://jonas.re/wp-content/uploads/2014/07/Screen-Shot-2014-07-13-at-16.24.52.png" alt="Screen Shot 2014-07-13 at 16.24.52" width="706" height="578" class="alignnone size-full wp-image-199" />
+<img data-responsive="199" src="/images/Screen-Shot-2014-07-13-at-16.24.52.png" alt="Screen Shot 2014-07-13 at 16.24.52" width="706" height="578" class="alignnone size-full wp-image-199" />
 
 To my mind, this is a great workflow, especially when your site is responsive (which should be the case) and you need to test it on several devices.
 
