@@ -1,0 +1,11 @@
+# Site settings
+title: Jonas Reitmann
+email: jonas@reitmann.me
+description: > Jonas Reitmann
+baseurl: ""
+url: "http://jonas.re" # the base hostname & protocol for your site
+twitter_username: jonicious
+github_username:  jonicious
+
+# Build settings
+markdown: kramdown
