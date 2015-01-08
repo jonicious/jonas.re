@@ -3,7 +3,11 @@
 <html lang="de">
 
 <head>
-  <title>{{ page.title }} - {{ site.title }}</title>
+  {% if page.url == "/index.html" %}
+    <title>{{ site.title }}</title>
+  {% else %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+  {% endif %}
   <meta charset="UTF-8">
   <meta name="description" content="Jonas Reitmann" />
   <meta name="viewport" content="width=device-width">
