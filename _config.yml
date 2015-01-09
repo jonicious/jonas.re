@@ -9,3 +9,14 @@ github_username:  jonicious
 
 # Build settings
 markdown: kramdown
+exclude: [
+  "/node_modules",
+  "gulpfile.js",
+  "package.json",
+  "README.md",
+  "/css/style.scss"
+]
+
+keep_files: [
+  "css/style.css"
+]
