@@ -1,16 +1,16 @@
 noscript {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	text-align: center;
-	background: #B33A3A;
-	padding: 10px 0;
-	color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: #B33A3A;
+  padding: 10px 0;
+  color: #FFF;
 }
 
 header {
-	position: relative;
+  position: relative;
   @include container;
   margin-top: 5%;
 

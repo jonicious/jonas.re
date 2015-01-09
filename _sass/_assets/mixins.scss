@@ -1,5 +1,9 @@
 @mixin container {
-	margin: 0 auto;
-	max-width: 600px;
-	width: 90%;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+}
+
+@mixin source-sans-pro {
+  font-family: "source-sans-pro", "Helvetica", sans-serif;
 }
