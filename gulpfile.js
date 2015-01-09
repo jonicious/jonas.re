@@ -62,6 +62,6 @@ gulp.task('watch-jekyll', ['jekyll-html'], function() {
 });
 
 gulp.task('watch-frontend', ['js', 'scss'], function() {
-  gulp.watch('./js/prism.js', ['js')
+  gulp.watch('./js/prism.js', ['js'])
   gulp.watch('./_sass/**/*.scss', ['scss'])
 });
