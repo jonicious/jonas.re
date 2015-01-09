@@ -5,10 +5,14 @@ layout: default
 <div class="content">
 
   {% for post in site.posts %}
-
     <article>
-      <h2 class="post-headline"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-      <h4 class="date"><a href="{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }}</a></h4>
+      <h2 class="post-headline">
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      </h2>
+      <h4 class="date">
+        <a href="{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+      </h4>
+
       {{ post.excerpt }}
     </article>
 
