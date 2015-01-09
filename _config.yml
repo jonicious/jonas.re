@@ -18,5 +18,6 @@ exclude: [
 ]
 
 keep_files: [
-  "css/style.css"
+  "css/style.css",
+  "_site/.htaccess"
 ]
