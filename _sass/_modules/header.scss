@@ -63,10 +63,8 @@ header {
     }
   }
 
-  .menu-header-container {
-
-    display: table;
-    clear: both;
+  .nav-header {
+    clear: left;
 
     ul {
       padding: 0;
