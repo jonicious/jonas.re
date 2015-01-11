@@ -27,13 +27,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-h1, h2, h3, h4, p, ul, ol, blockquote, pre, code, nav, span, .profile-pic, li {
-  .wf-loading & {
-    visibility: hidden;
-  }
-
-  .wf-active & {
-    visibility: visible;
-  }
-}
