@@ -40,6 +40,10 @@ header {
         margin-left: 80px;
         margin-top: -48px;
       }
+
+      @media screen and (max-width: 370px) {
+        margin-top: -57px;
+      }
     }
 
     h4 {
