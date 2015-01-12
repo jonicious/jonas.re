@@ -9,6 +9,7 @@ var autoprefixer = require("gulp-autoprefixer");
 var cssmin = require("gulp-cssmin");
 var notify = require("gulp-notify");
 var rename = require("gulp-rename");
+var critical = require('critical');
 
 gulp.task("browser-sync", function() {
   browserSync({
@@ -33,6 +34,25 @@ gulp.task("html", function() {
     .pipe(gulp.dest("./_site"))
   .pipe(browserSync.reload({stream:true, once: true}));
 });
+
+gulp.task("critical", function() {
+  critical.generate({
+      base: '_site/',
+      src: 'index.html',
+      dest: 'css/critical.css',
+      minify: true,
+      extract: true,
+      width: 320,
+      height: 480
+  });
+
+  critical.inline({
+    base: '_site/',
+    src: 'index.html',
+    dest: 'index.html',
+    minify: true
+  });
+})
 
 gulp.task("js", function () {
   gulp.src(["/js/prism.js"])
