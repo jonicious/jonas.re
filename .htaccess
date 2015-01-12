@@ -1,3 +1,7 @@
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^www.jonas.re
+RewriteRule ^(.*)$ http://jonas.re$1 [R=301,L]
+
 # Deflate Compression by FileType
 <IfModule mod_deflate.c>
  AddOutputFilterByType DEFLATE text/plain
@@ -37,3 +41,4 @@
   Header set Cache-Control "max-age=216000, private"
  </filesmatch>
 </ifmodule>
+
