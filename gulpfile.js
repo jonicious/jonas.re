@@ -32,6 +32,9 @@ gulp.task("html", function() {
   gulp.src("./_site/index.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./_site"))
+  gulp.src("./_site/*/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("./_site/./"))
   .pipe(browserSync.reload({stream:true, once: true}));
 });
 
