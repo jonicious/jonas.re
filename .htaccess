@@ -1,4 +1,4 @@
-RewriteEngine on 
+RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www.jonas.re
 RewriteRule ^(.*)$ http://jonas.re$1 [R=301,L]
 
@@ -42,7 +42,11 @@ RewriteRule ^(.*)$ http://jonas.re$1 [R=301,L]
   </filesmatch>
 
   <filesmatch "\\.(js)$">
-    Header set Cache-Control "max-age=604800, private"
+    Header set Cache-Control "max-age=604800, public"
+  </filesmatch>
+
+  <filesmatch "\\.(ttf)$">
+    Header set Cache-Control "max-age=604800, public"
   </filesmatch>
 </ifmodule>
 
