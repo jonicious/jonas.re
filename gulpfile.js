@@ -10,6 +10,7 @@ var cssmin = require("gulp-cssmin");
 var notify = require("gulp-notify");
 var rename = require("gulp-rename");
 var critical = require('critical');
+var addsrc = require('gulp-add-src');
 
 gulp.task("browser-sync", function() {
   browserSync({
@@ -58,10 +59,13 @@ gulp.task("critical", function() {
 })
 
 gulp.task("js", function () {
-  gulp.src(["/js/prism.js"])
+  gulp.src("./js/prism.js")
+    .pipe(addsrc("./js/fontfaceobserver.js"))
+    .pipe(addsrc("./js/main.js"))
     .pipe(concat("script.min.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("./js"))
+    .pipe(gulp.dest("./js/"))
+    .pipe(gulp.dest("./_site/js/"))
   .pipe(browserSync.reload({stream:true, once: true}));
 });
 

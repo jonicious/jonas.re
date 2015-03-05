@@ -24,6 +24,7 @@
       "gulp-cssmin": "~0.1.6",
       "gulp-notify": "2.1.0",
       "gulp-rename": "~1.2.0",
-      "critical": "0.5.2"
+      "critical": "0.5.2",
+      "gulp-add-src": "~0.2.0"
     }
 }
