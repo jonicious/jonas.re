@@ -12,6 +12,10 @@ var rename = require("gulp-rename");
 var critical = require('critical');
 var addsrc = require('gulp-add-src');
 
+/*
+ * Opens a webserver (usually localhost:3000) and runs the site.
+ */
+
 gulp.task("browser-sync", function() {
   browserSync({
     server: {
@@ -19,6 +23,10 @@ gulp.task("browser-sync", function() {
     }
   });
 });
+
+/*
+ * Builds the site.
+ */
 
 gulp.task("jekyll", function (gulpCallBack){
   var spawn = require("child_process").spawn;
@@ -29,17 +37,28 @@ gulp.task("jekyll", function (gulpCallBack){
   });
 });
 
-gulp.task("html", function() {
+/*
+ * The html task waits for the Jekyll task to finish.
+ * Then minifies the html (the index and every other file).
+ */
+
+gulp.task("html", ["jekyll"], function() {
   gulp.src("./_site/index.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./_site"))
   gulp.src("./_site/*/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./_site/./"))
-  .pipe(browserSync.reload({stream:true, once: true}));
 });
 
-gulp.task("critical", function() {
+/*
+ * The critical task waits for the html task to finish.
+ * Then it generates the critical css (given the index.html)
+ * and puts it in the index.html
+ * By now, critical css is only generated for the index page.
+ */
+
+gulp.task("critical", ["html"], function() {
   critical.generate({
       base: '_site/',
       src: 'index.html',
@@ -56,7 +75,15 @@ gulp.task("critical", function() {
     dest: 'index.html',
     minify: true
   });
+
 })
+
+/*
+ * Takes js files and concatenates it in script.min.js.
+ * This file will get minified and saved
+ * to the sites /js directory and the projects /js directory.
+ * If one javascript changes, the browser gets reloaded.
+ */
 
 gulp.task("js", function () {
   gulp.src("./js/prism.js")
@@ -66,8 +93,15 @@ gulp.task("js", function () {
     .pipe(uglify())
     .pipe(gulp.dest("./js/"))
     .pipe(gulp.dest("./_site/js/"))
-  .pipe(browserSync.reload({stream:true, once: true}));
+    .pipe(reload({stream: true}));
 });
+
+/*
+ * Takes the style.scss where other scss files are imported.
+ * Then compiles, autoprefixes and minifies it.
+ * Later, we have one file which is saved to the sites /css directory.
+ * If one css file changes, the changes gets injected (even without reloading).
+ */
 
 gulp.task("scss", function() {
   gulp.src(["./css/style.scss"])
@@ -79,16 +113,17 @@ gulp.task("scss", function() {
     .pipe(autoprefixer("last 2 version", "ie 9"))
     .pipe(cssmin())
     .pipe(gulp.dest("./_site/css/"))
+    .pipe(reload({stream: true}));
 });
 
-gulp.task("all", ["html", "jekyll", "js", "scss"]);
-gulp.task("jekyll-html", ["jekyll", "html"]);
+/*
+ * This task watches for changes to every js and scss file and then run its task.
+ * It even looks files related to Jekyll (such as articles)
+ * and then runs Jekyll to build the site.
+ */
 
-gulp.task("watch-jekyll", ["jekyll-html"], function() {
-  gulp.watch("./*/**/*.html", ["jekyll-html"])
-});
-
-gulp.task("watch-frontend", ["js", "scss"], function() {
-  gulp.watch("./js/prism.js", ["js"])
+gulp.task("watch", ["js", "scss", "browser-sync"], function() {
+  gulp.watch("./js/*.js", ["js"])
   gulp.watch("./_sass/**/*.scss", ["scss"])
+  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['html']);
 });
