@@ -52,13 +52,13 @@ gulp.task("html", ["jekyll"], function() {
 });
 
 /*
- * The critical task waits for the html task to finish.
- * Then it generates the critical css (given the index.html)
+ * Generates the critical css (given the index.html)
  * and puts it in the index.html
  * By now, critical css is only generated for the index page.
+ * (Not used at the moment.)
  */
 
-gulp.task("critical", ["html"], function() {
+gulp.task("critical", function() {
   critical.generate({
       base: '_site/',
       src: 'index.html',
@@ -125,5 +125,5 @@ gulp.task("scss", function() {
 gulp.task("watch", ["js", "scss", "browser-sync"], function() {
   gulp.watch("./js/*.js", ["js"])
   gulp.watch("./_sass/**/*.scss", ["scss"])
-  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['html']);
+  gulp.watch(["index.html", "_includes/*.html", "_layouts/*.html", "*.md", "_posts/*"], ["html"]);
 });
