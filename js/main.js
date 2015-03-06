@@ -1,8 +1,6 @@
 var observer = new FontFaceObserver('Source Sans Pro', {});
+var body = document.getElementsByTagName("body")[0];
 
 observer.check().then(function () {
-  document.body.className = "fonts-loaded";
-  console.log("Font is available");
-}, function () {
-  console.log('Font is not available');
+  body.className = "fonts-loaded";
 });
