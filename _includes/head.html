@@ -11,19 +11,44 @@
   <meta charset="UTF-8">
   <meta name="description" content="Jonas Reitmann" />
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+  <script>
+    function loadCSS( href, before, media, callback ){
+    "use strict";
+    var ss = window.document.createElement( "link" );
+    var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+    var sheets = window.document.styleSheets;
+    ss.rel = "stylesheet";
+    ss.href = href;
+    ss.media = "only x";
+    if( callback ) {
+      ss.onload = callback;
+    }
+    ref.parentNode.insertBefore( ss, ref );
+    function toggleMedia(){
+      var defined;
+      for( var i = 0; i < sheets.length; i++ ){
+        if( sheets[ i ].href && sheets[ i ].href.indexOf( ss.href ) > -1 ){
+          defined = true;
+        }
+      }
+      if( defined ){
+        ss.media = media || "all";
+      }
+      else {
+        setTimeout( toggleMedia );
+      }
+    }
+    toggleMedia();
+    return ss;
+  }
+  loadCSS( "/css/style.css" );
+  </script>
   <link rel="icon" type="image/png" href="/assets/profile.png" />
-
-  <!-- Facebook -->
-
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ post.url | prepend: site.baseurl }}">
   <meta property="og:site_name" content="Jonas Reitmann">
   <meta property="og:description" content="{{ post.excerpt }}">
-
-  <!-- Twitter cards -->
-
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@jonicious">
   <meta name="twitter:creator" content="@jonicious">
