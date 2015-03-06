@@ -9,7 +9,7 @@ body {
   font-family: "Helvetica", sans-serif;
 }
 
-body .fonts-loaded {
+.fonts-loaded {
   @include source-sans-pro;
 }
 
