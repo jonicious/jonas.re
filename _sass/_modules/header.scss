@@ -26,10 +26,23 @@ header {
     @media screen and (max-width: 800px) {
       margin-left: 0;
     }
+
+    @media screen and (max-width: 400px) {
+      float: none;
+      width: 120px;
+      height: 120px;
+      margin: 30px auto 0 auto;
+      display: block;
+    }
   }
 
   .text {
     float: left;
+
+    @media screen and (max-width: 400px) {
+      float: none;
+      margin: 0 auto;
+    }
 
     h2 {
       font-size: 22px;
@@ -41,8 +54,10 @@ header {
         margin-top: -48px;
       }
 
-      @media screen and (max-width: 370px) {
-        margin-top: -57px;
+      @media screen and (max-width: 400px) {
+        margin-left: 0;
+        margin-top: 25px;
+        text-align: center;
       }
     }
 
