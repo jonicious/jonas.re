@@ -11,6 +11,7 @@ var notify = require("gulp-notify");
 var rename = require("gulp-rename");
 var critical = require('critical');
 var addsrc = require('gulp-add-src');
+var shell = require('gulp-shell');
 
 /*
  * Opens a webserver (usually localhost:3000) and runs the site.
@@ -38,11 +39,22 @@ gulp.task("jekyll", function (gulpCallBack){
 });
 
 /*
+ * Runs the the following tasks in order and whats until they are finished:
+ * - Jekyll
+ * - Critical
+ * - HTML
+ */
+
+gulp.task('build', shell.task([
+  'gulp jekyll && gulp critical && gulp html'
+]));
+
+/*
  * The html task waits for the Jekyll task to finish.
  * Then minifies the html (the index and every other file).
  */
 
-gulp.task("html", ["jekyll"], function() {
+gulp.task("html", function() {
   gulp.src("./_site/index.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./_site"))
@@ -76,7 +88,7 @@ gulp.task("critical", function() {
     minify: true
   });
 
-})
+});
 
 /*
  * Takes js files and concatenates it in script.min.js.
@@ -125,5 +137,5 @@ gulp.task("scss", function() {
 gulp.task("watch", ["js", "scss", "browser-sync"], function() {
   gulp.watch("./js/*.js", ["js"])
   gulp.watch("./_sass/**/*.scss", ["scss"])
-  gulp.watch(["index.html", "_includes/*.html", "_layouts/*.html", "*.md", "_posts/*"], ["html"]);
+  gulp.watch(["index.html", "_includes/*.html", "_layouts/*.html", "*.md", "_posts/*"], ["build"]);
 });
