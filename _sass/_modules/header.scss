@@ -27,7 +27,7 @@ header {
       margin-left: 0;
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 200px) {
       float: none;
       width: 120px;
       height: 120px;
@@ -39,7 +39,7 @@ header {
   .text {
     float: left;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 200px) {
       float: none;
       margin: 0 auto;
     }
@@ -54,7 +54,7 @@ header {
         margin-top: -48px;
       }
 
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 200px) {
         margin-left: 0;
         margin-top: 25px;
         text-align: center;
