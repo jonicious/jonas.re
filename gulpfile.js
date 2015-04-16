@@ -17,25 +17,25 @@ var shell = require('gulp-shell');
  * Opens a webserver (usually localhost:3000) and runs the site.
  */
 
-gulp.task("browser-sync", function() {
-  browserSync({
-    server: {
-      baseDir: "./_site"
-    }
-  });
+gulp.task("browser-sync", function () {
+    browserSync({
+        server: {
+            baseDir: "./_site"
+        }
+    });
 });
 
 /*
  * Builds the site.
  */
 
-gulp.task("jekyll", function (gulpCallBack){
-  var spawn = require("child_process").spawn;
-  var jekyll = spawn('jekyll', ["build"], {stdio: "inherit"});
+gulp.task("jekyll", function (gulpCallBack) {
+    var spawn = require("child_process").spawn;
+    var jekyll = spawn('jekyll', ["build"], {stdio: "inherit"});
 
-  jekyll.on("exit", function(code) {
-    gulpCallBack(code === 0 ? null : "ERROR: Jekyll process exited with code: "+code);
-  });
+    jekyll.on("exit", function (code) {
+        gulpCallBack(code === 0 ? null : "ERROR: Jekyll process exited with code: " + code);
+    });
 });
 
 /*
@@ -46,7 +46,7 @@ gulp.task("jekyll", function (gulpCallBack){
  */
 
 gulp.task('build', shell.task([
-  'gulp jekyll && gulp critical && gulp html'
+    'gulp jekyll && gulp critical && gulp html'
 ]));
 
 /*
@@ -54,13 +54,13 @@ gulp.task('build', shell.task([
  * Then minifies the html (the index and every other file).
  */
 
-gulp.task("html", function() {
-  gulp.src("./_site/index.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("./_site"))
-  gulp.src("./_site/*/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("./_site/./"))
+gulp.task("html", function () {
+    gulp.src("./_site/index.html")
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest("./_site"))
+    gulp.src("./_site/*/*.html")
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest("./_site/./"))
 });
 
 /*
@@ -70,23 +70,23 @@ gulp.task("html", function() {
  * (Not used at the moment.)
  */
 
-gulp.task("critical", function() {
-  critical.generate({
-      base: '_site/',
-      src: 'index.html',
-      dest: 'css/critical.css',
-      minify: true,
-      extract: true,
-      width: 320,
-      height: 480
-  });
+gulp.task("critical", function () {
+    critical.generate({
+        base: '_site/',
+        src: 'index.html',
+        dest: 'css/critical.css',
+        minify: true,
+        extract: true,
+        width: 320,
+        height: 480
+    });
 
-  critical.inline({
-    base: '_site/',
-    src: 'index.html',
-    dest: 'index.html',
-    minify: true
-  });
+    critical.inline({
+        base: '_site/',
+        src: 'index.html',
+        dest: 'index.html',
+        minify: true
+    });
 
 });
 
@@ -98,14 +98,14 @@ gulp.task("critical", function() {
  */
 
 gulp.task("js", function () {
-  gulp.src("./js/prism.js")
-    .pipe(addsrc("./js/fontfaceobserver.js"))
-    .pipe(addsrc("./js/main.js"))
-    .pipe(concat("script.min.js"))
-    .pipe(uglify())
-    .pipe(gulp.dest("./js/"))
-    .pipe(gulp.dest("./_site/js/"))
-    .pipe(reload({stream: true}));
+    gulp.src("./js/prism.js")
+        .pipe(addsrc("./js/fontfaceobserver.js"))
+        .pipe(addsrc("./js/main.js"))
+        .pipe(concat("script.min.js"))
+        .pipe(uglify())
+        .pipe(gulp.dest("./js/"))
+        .pipe(gulp.dest("./_site/js/"))
+        .pipe(reload({stream: true}));
 });
 
 /*
@@ -115,17 +115,17 @@ gulp.task("js", function () {
  * If one css file changes, the changes gets injected (even without reloading).
  */
 
-gulp.task("scss", function() {
-  gulp.src(["./css/style.scss"])
-    .pipe(sass({
-      onError: function(err) {
-        return notify().write(err);
-      }
-    }))
-    .pipe(autoprefixer("last 2 version", "ie 9"))
-    .pipe(cssmin())
-    .pipe(gulp.dest("./_site/css/"))
-    .pipe(reload({stream: true}));
+gulp.task("scss", function () {
+    gulp.src(["./css/style.scss"])
+        .pipe(sass({
+            onError: function (err) {
+                return notify().write(err);
+            }
+        }))
+        .pipe(autoprefixer("last 2 version", "ie 9"))
+        .pipe(cssmin())
+        .pipe(gulp.dest("./_site/css/"))
+        .pipe(reload({stream: true}));
 });
 
 /*
@@ -134,8 +134,8 @@ gulp.task("scss", function() {
  * and then runs Jekyll to build the site.
  */
 
-gulp.task("watch", ["js", "scss", "browser-sync"], function() {
-  gulp.watch("./js/*.js", ["js"])
-  gulp.watch("./_sass/**/*.scss", ["scss"])
-  gulp.watch(["index.html", "_includes/*.html", "_layouts/*.html", "*.md", "_posts/*"], ["build"]);
+gulp.task("watch", ["js", "scss", "browser-sync"], function () {
+    gulp.watch("./js/*.js", ["js"])
+    gulp.watch("./_sass/**/*.scss", ["scss"])
+    gulp.watch(["index.html", "_includes/*.html", "_layouts/*.html", "*.md", "_posts/*"], ["build"]);
 });

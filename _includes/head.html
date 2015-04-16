@@ -3,26 +3,26 @@
 <html lang="de">
 
 <head>
-  {% if page.url == "/index.html" %}
+    {% if page.url == "/index.html" %}
     <title>{{ site.title }}</title>
-  {% else %}
+    {% else %}
     <title>{{ page.title }} - {{ site.title }}</title>
-  {% endif %}
-  <meta charset="UTF-8">
-  <meta name="description" content="Jonas Reitmann" />
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="icon" type="image/png" href="/assets/profile.png" />
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ post.url | prepend: site.baseurl }}">
-  <meta property="og:site_name" content="Jonas Reitmann">
-  <meta property="og:description" content="{{ post.excerpt }}">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@jonicious">
-  <meta name="twitter:creator" content="@jonicious">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ post.excerpt }}">
+    {% endif %}
+    <meta charset="UTF-8">
+    <meta name="description" content="Jonas Reitmann"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/profile.png"/>
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ post.url | prepend: site.baseurl }}">
+    <meta property="og:site_name" content="Jonas Reitmann">
+    <meta property="og:description" content="{{ post.excerpt }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jonicious">
+    <meta name="twitter:creator" content="@jonicious">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ post.excerpt }}">
 </head>
 
 <body>
