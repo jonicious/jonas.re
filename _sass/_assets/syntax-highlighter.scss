@@ -19,7 +19,6 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 
-
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -106,7 +105,7 @@ pre[class*="language-"] {
 .style .token.string,
 .token.variable {
 	color: #a67f59;
-	background: hsla(0,0%,100%,.5);
+	background: hsla(0, 0%, 100%, .5);
 }
 
 .token.atrule,
@@ -114,7 +113,6 @@ pre[class*="language-"] {
 .token.keyword {
 	color: #07a;
 }
-
 
 .token.regex,
 .token.important {

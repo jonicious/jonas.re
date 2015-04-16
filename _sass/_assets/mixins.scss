@@ -1,9 +1,21 @@
-@mixin container {
-  margin: 0 auto;
-  max-width: 600px;
-  width: 90%;
+%container {
+	max-width: 600px;
+	width: 90%;
+	margin: 0 auto;
 }
 
-@mixin source-sans-pro {
-  font-family: "Source Sans Pro"
+%font {
+	font-family: "Source Sans Pro";
+}
+
+@mixin breakpoint($point) {
+	@if $point == tablet {
+		@media (max-width: 800px) {
+			@content;
+		}
+	} @else if $point == apple-watch {
+		@media (max-width: 200px) {
+			@content;
+		}
+	}
 }
