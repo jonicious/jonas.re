@@ -16,3 +16,4 @@ coverage
 tmp/stackprof-*
 .jekyll-metadata
 /node_modules/
+.idea/
