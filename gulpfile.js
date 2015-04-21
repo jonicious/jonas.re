@@ -50,6 +50,14 @@ gulp.task('build', shell.task([
 ]));
 
 /*
+ * Deploys the site on my server.
+ */
+
+gulp.task('deploy', shell.task([
+    'rsync --numeric-ids -avze ssh _site/* _site/.htaccess savebox@lupus.uberspace.de:/var/www/virtual/savebox/jonas.re/'
+]));
+
+/*
  * The html task waits for the Jekyll task to finish.
  * Then minifies the html (the index and every other file).
  */
