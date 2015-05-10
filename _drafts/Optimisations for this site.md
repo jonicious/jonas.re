@@ -6,11 +6,42 @@ This site is quite simple but I invested some time to make it as fast as possibl
 
 * Built with Jekyll
 * PageSpeed: 100/100
-* 
+
+### Visiting the site
+
+The following numbers will vary depending on your environment (device, internet connection) and your internet speed. Before visiting each page, I disabled the cache and emptied it.
+
+#### You have installed Source Sans Pro locally
+
+##### Index Page
+
+* Resources: 3
+* Page weight: 32.0 KB
+* Loading time: 266ms
+
+##### An article without images
+
+* Resources: 4
+* Page weight: 33.1 KB
+* Loading time: 267ms
+
+#### You have not installed Source Sans Pro locally
+
+##### Index Page
+
+* Resources: 6
+* Page weight: 470.0 KB
+* Loading time: 449ms
+
+##### An article without images
+
+* Resources: 7
+* Page weight: 471.1 KB 
+* Loading time: 624ms
 
 ### Use fallback fonts
 
-After I optimised many parts of the site the page loaded very fast but the fonts did not. I noticed this when I had a throttled internet connection. “Source Sans Pro Regular” weights 150 KB. In total, I load 566 KB font files (Bold, Italic, Regular, Semibold).
+After I optimised many parts of the site the page loaded very fast but the fonts did not. I noticed this when I had a throttled internet connection. “Source Sans Pro Regular” weights 150 KB. In total, I load 566 KB font files (Bold, Italic, Regular, Semibold) if they are needed on the page.
 
 My goal was to first load Helvetica to prevent a white screen (because everything loaded except the fonts). When the fonts loaded I want to apply them.
 
