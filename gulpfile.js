@@ -65,10 +65,10 @@ gulp.task('deploy', shell.task([
 gulp.task("html", function () {
     gulp.src("./_site/index.html")
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest("./_site"))
+        .pipe(gulp.dest("./_site"));
     gulp.src("./_site/*/*.html")
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest("./_site/./"))
+        .pipe(gulp.dest("./_site/./"));
 });
 
 /*
@@ -143,7 +143,7 @@ gulp.task("scss", function () {
  */
 
 gulp.task("watch", ["js", "scss", "browser-sync"], function () {
-    gulp.watch("./js/*.js", ["js"])
-    gulp.watch("./_sass/**/*.scss", ["scss"])
+    gulp.watch("./js/*.js", ["js"]);
+    gulp.watch("./_sass/**/*.scss", ["scss"]);
     gulp.watch(["index.html", "_includes/*.html", "_layouts/*.html", "*.md", "_posts/*"], ["build"]);
 });

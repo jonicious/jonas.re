@@ -4,15 +4,16 @@ layout: default
 
 <div class="content">
     <article>
+        
         <h2 class="post-headline">
-            <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+            {{ page.title }}
         </h2>
 
         <date class="date">
-            <a href="{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }}</a>
+            {{ page.date | date: "%-d %B %Y" }}
         </date>
 
         {{ content }}
-
+        
     </article>
 </div>
