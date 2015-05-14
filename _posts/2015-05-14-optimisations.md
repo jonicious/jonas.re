@@ -1,6 +1,10 @@
-—
+---
 title: Optimisations for this site
-—
+author: jonas
+layout: post
+date: 14.05.2015
+permalink: /optimisations/
+---
 
 This site is quite simple but I invested some time to make it as fast as possible. I learned some things during development I want to share.
 
@@ -11,29 +15,25 @@ This site is quite simple but I invested some time to make it as fast as possibl
 
 The following numbers will vary depending on your environment (device, internet connection) and your internet speed. Before visiting each page, I disabled the cache and emptied it.
 
-#### You have installed Source Sans Pro locally
-
-##### Index Page
+#### Index Page (You have installed Source Sans Pro locally)
 
 * Resources: 3
 * Page weight: 32.0 KB
 * Loading time: 266ms
 
-##### An article without images
+#### An article without images (You have installed Source Sans Pro locally)
 
 * Resources: 4
 * Page weight: 33.1 KB
 * Loading time: 267ms
 
-#### You have not installed Source Sans Pro locally
-
-##### Index Page
+#### Index Page (You have not installed Source Sans Pro locally)
 
 * Resources: 6
 * Page weight: 470.0 KB
 * Loading time: 449ms
 
-##### An article without images
+#### An article without images (You have not installed Source Sans Pro locally)
 
 * Resources: 7
 * Page weight: 471.1 KB 
@@ -45,36 +45,40 @@ After I optimised many parts of the site the page loaded very fast but the fonts
 
 My goal was to first load Helvetica to prevent a white screen (because everything loaded except the fonts). When the fonts loaded I want to apply them.
 
-To achieve this, just embed a copy of [Font Face Observer](https://github.com/bramstein/fontfaceobserver) and use the following script. 
+To achieve this, just embed a copy of [Font Face Observer](https://github.com/bramstein/fontfaceobserver) and use the following script.
 
-	var observer = new FontFaceObserver(‘Source Sans Pro’, {});
-	var body = document.getElementsByTagName(“body”)[0];
+<pre><code class="language-javascript">var observer = new FontFaceObserver(‘Source Sans Pro’, {});
+var body = document.getElementsByTagName(“body”)[0];
 	
-	observer.check().then(function () {
-  	  body.className = “fonts-loaded”;
-	});
+observer.check().then(function () {
+	body.className = 'fonts-loaded';
+});
+</code></pre>
 
 When the fonts loaded, the class “fonts-loaded” will be added the ``<body>`` element. In your CSS use it like this:
 
-	body {
-		font-family: “Helvetica”, sans-serif;
-	}
+<pre><code class="language-css">body {
+	font-family: 'Helvetica', sans-serif;
+}
 
-	.fonts-loaded {
-		font-family: “Source Sans Pro”;
-	}
+.fonts-loaded {
+	font-family: 'Source Sans Pro';
+}
+</code></pre>
+
 
 ### Use the ``local`` property in ``@font-face``
 
 Some users may have your font installed locally. So why would you load it? You can easily use the ``local`` property in ``@font-face`` like this:
 
-	@font-face {
-		font-family: “Source Sans Pro”;
-		src: local(“Source Sans Pro Regular”),
-		local(“SourceSansPro-Regular”),
-		url(../assets/SourceSansPro-Regular.ttf);
-		font-weight: normal;
-	}
+<pre><code class="language-css">@font-face {
+	font-family: 'Source Sans Pro';
+	src: local('Source Sans Pro Regular'),
+	local('SourceSansPro-Regular'),
+	url(../assets/SourceSansPro-Regular.ttf);
+	font-weight: normal;
+}
+</code></pre>
 
 ### Running gulp tasks in a row is impossible
 
@@ -82,15 +86,15 @@ Gulp tasks always run asynchronous. There is no way to change this because this 
 
 In your shell you could use something like this:
 
-	gulp jekyll && gulp critical && gulp html
+<pre><code class="language-javascript">gulp jekyll && gulp critical && gulp html</code></pre>
 
 It waits for the jekyll task to finish, then runs the critical task and after this task is done, it runs the html task. I installed [gulp-shell](https://www.npmjs.com/package/gulp-shell) and then created a simple gulp task:
 
-	var shell = require(‘gulp-shell’);
-
-	gulp.task(‘build’, shell.task([
-    ‘gulp jekyll && gulp critical && gulp html’
-	]));
+<pre><code class="language-javascript">var shell = require('gulp-shell');
+gulp.task('build', shell.task([
+   	'gulp jekyll && gulp critical && gulp html'
+]));
+</code></pre>
 
 ### Cache and compress everything (it is easy)
 
@@ -100,22 +104,24 @@ Caching and compression is easy. If your site runs on an Apache you can enable c
 
 Jekyll has a build in SCSS preprocessor. It works great but you should disable it if you use gulp for tasks like autoprefix and minify your (S)CSS.
 
-By running ``jekyll build``, everything except the folders beginning with a underscore will be cloned to the ``_site`` folder. If you want to exclude files or folders, add them in your ``_config.yml`` with the ``exclude`` tag.
+By running ``jekyll build``, everything except the folders beginning with a underscore will be cloned to the ``_site`` folder. If you want to exclude files or folders, add them in your ``_config.yml`` within the ``exclude`` tag.
 
-	exclude: [
-	  “/node_modules”,
-	  “gulpfile.js”,
-	  “package.json”,
-	  “README.md”,
-	  “/css/style.scss”
-	]
+<pre><code class="language-javascript">exclude: [
+	'/node_modules',
+	'gulpfile.js',
+	'package.json',
+	'README.md',
+ 	'/css/style.scss'
+]
+</code></pre>
 
 ``jekyll build`` also overwrites every file from the ``_site`` directory that is not generated by Jekyll. That is particularly annoying if you use a build system like gulp.js which is very likely to save files there. For that, you have to use the ``keep_files`` tag.
 
-	keep_files: [
-	  “css/style.css”,
-	  “_site/.htaccess”
-	]
+<pre><code class="language-javascript">keep_files: [
+	'css/style.css',
+	'_site/.htaccess'
+]
+</code></pre>
 
 ### Misc
 
@@ -125,4 +131,4 @@ By running ``jekyll build``, everything except the folders beginning with a unde
 * Use critical CSS
 * Add the ``_site/`` directory to your ``.gitignore``
 
-You can find the whole code of the site on [Github](https://github.com/jonicious/jonas.re/tree/master). If you find any grammatical errors or have feedback what to do better feel free to open an [issue](https://github.com/jonicious/jonas.re/issues).
+**You can find the whole code of the site on [Github](https://github.com/jonicious/jonas.re/tree/master).** (If you find any grammatical errors or have feedback what to do better feel free to open an [issue](https://github.com/jonicious/jonas.re/issues).)
