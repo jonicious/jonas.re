@@ -15,26 +15,16 @@ article {
 
 		a {
 			color: $dark-gray;
-
-			&:hover {
-				text-decoration: none;
-				color: darken($dark-gray, 30%);
-			}
+			border-bottom: 0;
 		}
 	}
 
 	.date {
-		margin-top: -2px;
 		font-size: 15px;
-		font-weight: 400;
 
 		a {
 			color: $dark-gray;
-
-			&:hover {
-				text-decoration: none;
-				color: darken($dark-gray, 30%);
-			}
+			border-bottom: 0;
 		}
 	}
 
@@ -43,13 +33,13 @@ article {
 	}
 
 	strong {
-		color: darken($dark-gray, 30%);
+		color: $dark-gray;
 	}
 
 	code {
 		font-size: 15px;
 		padding: 3px;
-		background: #e9e9e9;
+		background: $silver-white;
 		border-radius: 4px;
 	}
 
@@ -84,10 +74,10 @@ article {
 	}
 
 	a {
-		color: $dark-gray;
+		border-bottom: 1px solid $light-gray;
 
 		&:hover {
-			text-decoration: underline;
+			border-bottom: 1px solid $gray;
 		}
 	}
 }

@@ -74,10 +74,10 @@ header {
 	}
 
 	a {
-		color: $dark-gray;
+		border-bottom: 1px solid $light-gray;
 
 		&:hover {
-			text-decoration: underline;
+			border-bottom: 1px solid $gray;
 		}
 	}
 }
@@ -102,10 +102,10 @@ header {
 		}
 
 		a {
-			color: #4e4e4e;
+			color: $gray;
 
 			&:hover {
-				color: darken(#4e4e4e, 30%);
+				color: $dark-gray;
 			}
 		}
 	}
