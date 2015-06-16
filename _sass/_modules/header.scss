@@ -24,10 +24,13 @@ header {
 	float: left;
 	height: 60px;
 	width: 60px;
-	background: url(/assets/profile.png) center center;
-	background-size: cover;
-	border-radius: 100%;
 	margin-left: -80px;
+
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 100%;
+	}
 
 	@include breakpoint(tablet) {
 		margin-left: 0;
