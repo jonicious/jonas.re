@@ -29,8 +29,13 @@ On small images, the code looks like this:
   &lt;img style=&quot;-webkit-user-select:none; display:block; margin:auto;&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=75&amp;amp;txt=400%C3%97400&amp;amp;w=400&amp;amp;h=400&quot;&gt;
 &lt;/body&gt;
 </code></pre>
-	
-On large images, there is ``cursor: zoom-in`` and a space after the CSS property.
+
+On large images, there is ``cursor: zoom-in`` and a space after the CSS property. The code above looks like this in Safari 9 (which is currently in beta). In Safari 8.0.7 (current version) it looks the following no matter how big the image is.
+
+<pre><code class="language-markup">&lt;body style=&quot;margin: 0px&quot;&gt;
+  &lt;img style=&quot;-webkit-user-select: none; display: block; margin: auto; cursor: -webkit-zoom-in;&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=75&amp;amp;txt=1100%C3%971100&amp;amp;w=1100&amp;amp;h=1100&quot; width=&quot;866&quot; height=&quot;866&quot;&gt;
+&lt;/body&gt;
+</code></pre>
 
 ### Firefox Developer Edition
 
@@ -67,27 +72,52 @@ Note that they link another stylesheet to display the specific styles. The appli
 	
 ### Styling
 
-As you could have seen above, Safari uses inline styles to style single images. I created a file called ``safari.css`` with the following content:
+As you could have seen above, Safari uses inline styles to style single images. I created a file called ``safari.css`` with the following content.
+
+**Safari 9:**
 
 <pre><code class="language-css">/* Image styles */
 
-	body[style="margin: 0px"] img[style="-webkit-user-select:none; display:block; margin:auto;"]:only-of-type,
-	body[style="margin: 0px"] img[style="-webkit-user-select: none; display: block; margin: auto; cursor: zoom-in;"]:only-of-type {
-	  text-align: center;
-	  position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: auto !important;
-      height: auto !important;
-      max-width: 90%;
-      max-height: 100%;
-    }</code></pre>
+body[style="margin: 0px"] img[style="-webkit-user-select:none; display:block; margin:auto;"]:only-of-type,
+body[style="margin: 0px"] img[style="-webkit-user-select: none; display: block; margin: auto; cursor: zoom-in;"]:only-of-type {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto !important;
+  height: auto !important;
+  max-width: 90%;
+  max-height: 100%;
+}</code></pre>
+    
+**Safari 8:**
+
+<pre><code class="language-css">/* Image styles */
+
+body[style="margin: 0px"] img[style="-webkit-user-select: none; display: block; margin: auto; cursor: -webkit-zoom-in;"]:only-of-type {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto !important;
+  height: auto !important;
+  max-width: 90%;
+  max-height: 100%;
+}</code></pre>
     
 What does this do? It selects only ``body`` elements that have an inline styling with ``margin: 0px`` and ``img`` elements with specific styles. Note the space after the CSS property. With the help of the ``:only-of-type`` selector we make sure that we style only images that are the only type like this on the page. If there were multiple images with these styles, our styles would not have been applied.
 
-You have to set ``width`` and ``height`` to ``auto`` to set "reset" them and overwrite them with ``!important`` because inline styles have a higher priority then embedded CSS. 
+You have to set ``width`` and ``height`` to ``auto`` to set "reset" them and overwrite them with ``!important`` because inline styles have a higher priority then embedded CSS.
+
+If you would like to set a background to the ``body``, this would be very easy. Though it would be easy I would not recommend it. I guess there are some pages that have an inline style of ``margin: 0px`` which you would style too.
+
+<pre><code class="language-css">body[style="margin: 0px"] {
+  background: black;
+}</code></pre>
 
 ### How to add a custom style sheet
 
