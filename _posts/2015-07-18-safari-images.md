@@ -72,7 +72,7 @@ Note that they link another stylesheet to display the specific styles. The appli
 	
 ### Styling
 
-As you could have seen above, Safari uses inline styles to style single images. I created a file called ``safari.css`` with the following content.
+As you could have seen above, Safari uses inline styles to style single images. I created a file called ``safari.css`` with the following content. Note the space after the CSS property.
 
 **Safari 9:**
 
@@ -109,7 +109,7 @@ body[style="margin: 0px"] img[style="-webkit-user-select: none; display: block; 
   max-height: 100%;
 }</code></pre>
     
-What does this do? It selects only ``body`` elements that have an inline styling with ``margin: 0px`` and ``img`` elements with specific styles. Note the space after the CSS property. With the help of the ``:only-of-type`` selector we make sure that we style only images that are the only type like this on the page. If there were multiple images with these styles, our styles would not have been applied.
+What does this do? It selects only ``body`` elements that have an inline styling with ``margin: 0px`` and ``img`` elements with specific styles. With the help of the ``:only-of-type`` selector we make sure that we style only images that are the only type like this on the page. If there were multiple images with these styles, our styles would not have been applied.
 
 You have to set ``width`` and ``height`` to ``auto`` to set "reset" them and overwrite them with ``!important`` because inline styles have a higher priority then embedded CSS.
 
