@@ -37,9 +37,9 @@ On large images, there is ``cursor: zoom-in`` and a space after the CSS property
 &lt;/body&gt;
 </code></pre>
 
-### Firefox Developer Edition
+### Firefox
 
-**I like the way, "Firefox Developer Edition" displays single images:**
+**I like the way, Firefox displays single images:**
 
 <img src="/images/firefox-image.png" alt="Single image in Firefox">
 
