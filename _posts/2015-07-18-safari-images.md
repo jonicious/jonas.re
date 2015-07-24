@@ -96,7 +96,8 @@ body[style="margin: 0px"] img[style="-webkit-user-select: none; display: block; 
 
 <pre><code class="language-css">/* Image styles */
 
-body[style="margin: 0px"] img[style="-webkit-user-select: none; display: block; margin: auto; cursor: -webkit-zoom-in;"]:only-of-type {
+body[style="margin: 0px"] img[style="-webkit-user-select: none; display: block; margin: auto; cursor: -webkit-zoom-in;"]:only-of-type,
+body[style="margin: 0px"] img[style="-webkit-user-select:none; display:block; margin:auto;"]:only-of-type {
   text-align: center;
   position: absolute;
   top: 0;
