@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "gulp": "3.8.10",
-    "browser-sync": "~1.8.3",
+    "browser-sync": "2.9.10",
     "gulp-htmlmin": "~0.2.0",
     "gulp-concat": "~2.4.3",
     "gulp-uglify": "~1.0.2",
