@@ -35,14 +35,6 @@ header {
 	@include breakpoint(tablet) {
 		margin-left: 0;
 	}
-
-	@include breakpoint(apple-watch) {
-		float: none;
-		width: 120px;
-		height: 120px;
-		margin: 30px auto 0 auto;
-		display: block;
-	}
 }
 
 .header-name-text {
@@ -54,13 +46,6 @@ header {
 
 	@include breakpoint(tablet) {
 		margin-left: 20px;
-	}
-
-	@include breakpoint(apple-watch) {
-		width: 100%;
-		margin-left: 0;
-		margin-top: 25px;
-		text-align: center;
 	}
 }
 

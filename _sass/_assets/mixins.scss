@@ -5,16 +5,12 @@
 }
 
 %font {
-	font-family: "Source Sans Pro";
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 @mixin breakpoint($point) {
 	@if $point == tablet {
 		@media (max-width: 800px) {
-			@content;
-		}
-	} @else if $point == apple-watch {
-		@media (max-width: 200px) {
 			@content;
 		}
 	}
