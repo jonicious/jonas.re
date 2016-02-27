@@ -2,7 +2,7 @@
 title: About
 author: Jonas 
 layout: page
-permalink: /ueber-mich/
+permalink: /about/
 ---
 
 I am Jonas Reitmann and work at [mytaxi](http://mytaxi.com/) as a developer.
