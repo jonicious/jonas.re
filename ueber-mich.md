@@ -1,10 +1,14 @@
 ---
-title: Über mich
+title: About
 author: Jonas 
 layout: page
 permalink: /ueber-mich/
 ---
-Ich bin Jonas Reitmann und mache seit dem 01. August 2014 eine Ausbildung zum &#8220;Fachinformatiker Fachrichtung Anwendungsentwicklung&#8221; bei <a href="http://mytaxi.com/" target="_blank">mytaxi</a>.
+
+I am Jonas Reitmann and work at [mytaxi](http://mytaxi.com/) as a developer.
+
+* [Twitter](https://twitter.com/jonicious)
+* [Github](https://github.com/jonicious)
 
 Jonas Reitmann  
 Theodor-Rumpel-Stieg 7  
