@@ -25,7 +25,7 @@ gulp.task("browser-sync", function () {
  */
 
 gulp.task('deploy', shell.task([
-    'rsync --numeric-ids -avze ssh _site/* _site/.htaccess savebox@lupus.uberspace.de:/var/www/virtual/savebox/jonas.re/'
+    'rsync --numeric-ids -avze ssh dist/** dist/.htaccess savebox@lupus.uberspace.de:/var/www/virtual/savebox/jonas.re/'
 ]));
 
 /*
@@ -65,8 +65,6 @@ gulp.task("copy", function () {
 
 /*
  * This task watches for changes to every js and scss file and then run its task.
- * It even looks files related to Jekyll (such as articles)
- * and then runs Jekyll to build the site.
  */
 
 gulp.task("watch", ["scss", "browser-sync", "copy"], function () {
