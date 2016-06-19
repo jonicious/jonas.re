@@ -1,0 +1,13 @@
+.headline {
+  font-weight: 400;
+  font-size: 2.1em;
+
+  &--white {
+    color: $white;
+  }
+
+  &--grey {
+    color: $grey;
+  }
+
+}
