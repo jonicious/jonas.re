@@ -1,5 +1,4 @@
 RewriteEngine on
-RewriteRule (.*) http://jonas.re/ [R=301,L][L]
 
 # Deflate Compression by FileType
 <IfModule mod_deflate.c>
