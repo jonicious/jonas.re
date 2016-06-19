@@ -1,0 +1,19 @@
+.content-section {
+  @extend %container;
+  clear: left;
+  padding-top: 3em;
+
+  .introduction-text {
+    margin-top: .7em;
+  }
+
+  .link-list {
+    margin-top: 1.4em;
+  }
+}
+
+.introduction-text {
+  color: $white;
+  font-size: 1.8em;
+  line-height: 1.6;
+}
