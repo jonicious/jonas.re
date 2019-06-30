@@ -25,10 +25,3 @@ run the following command:
 To build the site without running a local web server, run the following command:
 
     npm run build
-    
-This just runs ``gulp jekyll && gulp critical && gulp html``. You may ask yourself why doing it like this.
-Gulp always runs tasks asynchronous which does not work here because we need to wait until the Jekyll task 
-finishes and after that the Critical task finishes in order to let the HTML task run.
-
-I explained the issue [here](http://stackoverflow.com/questions/29039499/jekyll-critical-css-html-minify-in-one-gulp-task)
-and it seems like there is no proper solution. If I am wrong I would love to [know](https://github.com/jonicious/jonas.re/issues).

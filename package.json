@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp scss html copy"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
