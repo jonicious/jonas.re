@@ -7,7 +7,7 @@ If you find a bug or there is something to improve, feel free to create an issue
 
 ### Run locally
 
-    gulp watch
+    npm start
 
 This starts a local web server (which injects CSS changes and reloads the site automatically),
 builds the site and starts a watch task for the following file types:
@@ -24,7 +24,7 @@ run the following command:
     
 To build the site without running a local web server, run the following command:
 
-    gulp build
+    npm run build
     
 This just runs ``gulp jekyll && gulp critical && gulp html``. You may ask yourself why doing it like this.
 Gulp always runs tasks asynchronous which does not work here because we need to wait until the Jekyll task 

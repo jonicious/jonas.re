@@ -15,6 +15,10 @@
   "bugs": {
     "url": "https://github.com/jonicious/jonas.re/issues"
   },
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "browser-sync": "^2.13.0",
