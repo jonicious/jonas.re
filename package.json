@@ -1,32 +1,40 @@
 {
-  "name": "jonasre",
-  "description": "Site of Jonas Reitmann",
-  "author": "Jonas Reitmann",
-  "contributors": [
-    {
-      "name": "Jonas Reitmann",
-      "email": "jonas@reitmann.me"
+    "name": "jonas.re",
+    "description": "Repository for jonas.re",
+    "author": "Jonas Reitmann <jonas@reitmann.me>",
+    "dependencies": {
+        "babel-plugin-styled-components": "^1.10.7",
+        "gatsby": "^2.19.45",
+        "gatsby-plugin-react-helmet": "^3.1.24",
+        "gatsby-plugin-styled-components": "^3.2.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-helmet": "^5.2.1",
+        "styled-components": "^5.0.1",
+        "typeface-source-code-pro": "^1.1.3"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-react-app": "^5.2.1",
+        "eslint-loader": "^3.0.3",
+        "eslint-plugin-react": "^7.18.3",
+        "gatsby-plugin-eslint": "^2.0.8",
+        "prettier": "^1.19.1"
+    },
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jonicious/jonas.re"
+    },
+    "bugs": {
+        "url": "https://github.com/jonicious/jonas.re/issues"
     }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jonicious/jonas.re"
-  },
-  "bugs": {
-    "url": "https://github.com/jonicious/jonas.re/issues"
-  },
-  "scripts": {
-    "start": "gulp watch",
-    "build": "gulp scss html copy"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "browser-sync": "^2.13.0",
-    "gulp-htmlmin": "^2.0.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-notify": "^2.2.0",
-    "gulp-shell": "^0.5.2"
-  }
 }
