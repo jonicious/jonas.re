@@ -68,7 +68,6 @@ const IndexPage = () => (
                     <span role="img" aria-label="Man with raised hand">
                         🙋‍♂
                     </span>
-                    ️
                 </Headline>
                 <Stack md="sm">
                     <AboutText />
@@ -81,7 +80,6 @@ const IndexPage = () => (
                     <span role="img" aria-label="Man shrugging">
                         🤷‍♂
                     </span>
-                    ️️
                 </Headline>
 
                 <Stack space="sm">
