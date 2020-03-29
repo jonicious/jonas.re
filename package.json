@@ -16,8 +16,8 @@
     "url": "https://github.com/jonicious/jonas.re/issues"
   },
   "scripts": {
-    "start": "gulp watch",
-    "build": "gulp scss html copy"
+    "start": "npx gulp watch",
+    "build": "npx gulp scss html copy"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
