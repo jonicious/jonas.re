@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { WHITE } from './colors';
 
@@ -14,7 +15,15 @@ const LinkListItem = styled.li`
 `;
 
 export const LinkList = ({ children }) => {
-    return React.Children.map(children, child => {
-        return <LinkListItem>{child}</LinkListItem>;
-    });
+    return (
+        <ul>
+            {React.Children.map(children, child => {
+                return <LinkListItem>{child}</LinkListItem>;
+            })}
+        </ul>
+    );
+};
+
+LinkList.propTypes = {
+    children: PropTypes.node
 };
