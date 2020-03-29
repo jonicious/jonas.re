@@ -6,7 +6,7 @@ import { BLACK } from './colors';
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: "Source Code Pro", "Times New Roman", serif;
+        font-family: "Source Code Pro", serif;
         
         height: 100vh;
         width: 100vw;
