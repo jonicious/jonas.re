@@ -39,12 +39,12 @@ const AboutText = () => (
         Before Closelink, I worked at{' '}
         <ExternalLink to="https://mytaxi.com/de/">mytaxi</ExternalLink> for
         almost five years. Beside work related projects, I enjoy{' '}
-        <ExternalLink to="http://github.com/CSSclasses/CSSclasses-Hamburg">
+        <ExternalLink to="https://github.com/CSSclasses/CSSclasses-Hamburg">
             organising
         </ExternalLink>{' '}
         meetups like{' '}
-        <ExternalLink to="http://cssclass.es/">CSSclasses</ExternalLink>,{' '}
-        <ExternalLink to="http://vsco.co/joonaas/journal/p/1">
+        <ExternalLink to="https://cssclass.es/">CSSclasses</ExternalLink>,{' '}
+        <ExternalLink to="https://vsco.co/joonaas/journal/p/1">
             taking photos
         </ExternalLink>{' '}
         and traveling. I do not enjoy writing copies like this.
@@ -86,10 +86,10 @@ const IndexPage = () => (
 
                 <Stack space="sm">
                     <LinkList>
-                        <ExternalLink to="http://twitter.com/jonicious">
+                        <ExternalLink to="https://twitter.com/jonicious">
                             Twitter
                         </ExternalLink>
-                        <ExternalLink to="http://github.com/jonicious">
+                        <ExternalLink to="https://github.com/jonicious">
                             Github
                         </ExternalLink>
                         <ExternalLink to="mailto:jonas@reitmann.me">
