@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
-import 'typeface-source-code-pro';
+import './fonts.css';
 import { BLACK } from './colors';
 
 const GlobalStyle = createGlobalStyle`
