@@ -7,7 +7,7 @@ const LinkListItem = styled.li`
     color: ${WHITE};
     display: inline-block;
     margin-right: 32px;
-    font-size: 18px;
+    font-size: 16px;
 
     &:last-child {
         margin-right: 0;

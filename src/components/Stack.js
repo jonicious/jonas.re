@@ -9,5 +9,5 @@ const spacing = props => {
 };
 
 export const Stack = styled.div`
-    margin-top: ${spacing};
+    margin-bottom: ${spacing};
 `;

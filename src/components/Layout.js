@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createGlobalStyle } from 'styled-components';
-import './fonts.css';
+import styled, { createGlobalStyle } from 'styled-components';
+import { ReactGenieAnimations } from 'react-genie-styled-components';
+import 'typeface-source-code-pro';
 import { BLACK } from './colors';
 
 const GlobalStyle = createGlobalStyle`
@@ -26,10 +27,16 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
+const Spaced = styled.div`
+    margin-top: 72px;
+    margin-bottom: 72px;
+`;
+
 export const Layout = ({ children }) => (
     <React.Fragment>
         <GlobalStyle />
-        {children}
+        <ReactGenieAnimations />
+        <Spaced>{children}</Spaced>
     </React.Fragment>
 );
 
