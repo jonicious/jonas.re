@@ -29,6 +29,29 @@ const Headline2 = styled.h2`
     font-size: 20px;
 `;
 
+const ButtonWrapper = styled.div`
+    text-align: center;
+`;
+
+const ConnectButton = styled.a`
+    padding: 18px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: ${COLORS.WHITE};
+    border: 2px solid ${COLORS.WHITE};
+    color: ${COLORS.BLACK};
+    transition: 80ms ease-in;
+
+    &:hover {
+        background: ${COLORS.BLACK};
+        color: ${COLORS.WHITE};
+        border: 2px solid ${COLORS.WHITE};
+        transition: 80ms ease-in;
+    }
+`;
+
 const Project = ({ headline, paragraphs }) => {
     return (
         <React.Fragment>
@@ -107,6 +130,16 @@ const IndexPage = () => (
                         'After talking to different people, we did the first one in May 2016 followed by many more. It was always fun creating a space where people could just come around, learn and experiment and have something to eat and drink for free.'
                     ]}
                 />
+            </Reveal>
+
+            <Spacer space="lg" />
+
+            <Reveal animation={Animation.FadeInUp}>
+                <ButtonWrapper>
+                    <ConnectButton href="https://www.linkedin.com/in/jonas-reitmann-5aa92a15a/">
+                        Connect via LinkedIn
+                    </ConnectButton>
+                </ButtonWrapper>
             </Reveal>
         </ContentWrapper>
     </Layout>
