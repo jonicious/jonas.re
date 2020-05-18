@@ -9,10 +9,9 @@ import {
     Header,
     Layout,
     Paragraph,
-    Project,
     SEO,
     Spacer,
-    Workplace
+    Showcase
 } from '../components';
 
 const ContentWrapper = styled.div`
@@ -34,7 +33,7 @@ const IndexPage = () => (
             <Spacer space="lg" />
 
             <Reveal animation={Animation.FadeInUp}>
-                <Workplace headline="Closelink (since 07/19)">
+                <Showcase headline="Closelink (since 07/19)" type="work">
                     <Paragraph>
                         <ExternalLink to="https://www.closelink.net/">
                             Closelink
@@ -67,13 +66,16 @@ const IndexPage = () => (
                         </ExternalLink>
                         .
                     </Paragraph>
-                </Workplace>
+                </Showcase>
             </Reveal>
 
             <Spacer space="lg" />
 
             <Reveal animation={Animation.FadeInUp}>
-                <Workplace headline="FREE NOW (formerly mytaxi) (08/14 - 06/19)">
+                <Showcase
+                    headline="FREE NOW (formerly mytaxi) (08/14 - 06/19)"
+                    type="work"
+                >
                     <Paragraph>
                         I joined{' '}
                         <ExternalLink to="https://free-now.com/">
@@ -103,13 +105,16 @@ const IndexPage = () => (
                         and improve internal processes. When I left, the B2B
                         development team grew from four members to about 20.
                     </Paragraph>
-                </Workplace>
+                </Showcase>
             </Reveal>
 
             <Spacer space="lg" />
 
-            <Reveal animation={Animation.FadeInUp}>
-                <Project headline="Hamburg Coding School (since 2019)">
+            <Reveal animation={Animation.FadeInUp} label="Side Project">
+                <Showcase
+                    headline="Hamburg Coding School (since 2019)"
+                    type="side-project"
+                >
                     <Paragraph>
                         One of my passions is to spread my knowledge to others.
                         Not only does it enable others to do new things they
@@ -129,13 +134,16 @@ const IndexPage = () => (
                         </ExternalLink>
                         .
                     </Paragraph>
-                </Project>
+                </Showcase>
             </Reveal>
 
             <Spacer space="lg" />
 
             <Reveal animation={Animation.FadeInUp}>
-                <Project headline="CSSclasses (since 2016)">
+                <Showcase
+                    headline="CSSclasses (since 2016)"
+                    type="side-project"
+                >
                     <Paragraph>
                         I believe that education should be available for
                         everyone. It enables people to find their passion and
@@ -166,7 +174,7 @@ const IndexPage = () => (
                         could just come around, learn, experiment and have
                         something to eat and drink for free.
                     </Paragraph>
-                </Project>
+                </Showcase>
             </Reveal>
 
             <Spacer space="lg" />
