@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import { ReactGenieAnimations } from 'react-genie-styled-components';
-import 'typeface-source-code-pro';
+import 'typeface-source-sans-pro';
 import { BLACK } from './colors';
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: "Source Code Pro", serif;
-        
+        font-family: "Source Sans Pro", serif;
+
         height: 100vh;
         width: 100vw;
         background: ${BLACK};
@@ -28,8 +28,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Spaced = styled.div`
-    margin-top: 72px;
-    margin-bottom: 72px;
+    margin-top: 96px;
+    margin-bottom: 96px;
 `;
 
 export const Layout = ({ children }) => (

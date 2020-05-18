@@ -1,12 +1,6 @@
 import styled from 'styled-components';
-import { GREY } from './colors';
 
 export const Headline = styled.h1`
     font-weight: 600;
-    font-size: 22px;
-    color: ${props => props.color};
+    font-size: 24px;
 `;
-
-Headline.defaultProps = {
-    color: GREY
-};

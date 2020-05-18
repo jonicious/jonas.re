@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 const spacing = props => {
     switch (props.space) {
+        case 'xs':
+            return '8px';
         case 'sm':
             return '16px';
         case 'md':

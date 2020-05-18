@@ -3,22 +3,29 @@ import styled from 'styled-components';
 
 import { ProfilePicture } from './ProfilePicture';
 import { Headline } from './Headline';
-import { COLORS, ExternalLink, LinkList } from './index';
-import { Spacer } from './Spacer';
-import { WHITE } from './colors';
+import { COLORS, ExternalLink, LinkList, Spacer } from './index';
 
 const HeaderWrapper = styled.div`
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 `;
 
 const Right = styled.div`
     margin-left: 56px;
+
+    @media screen and (max-width: 600px) {
+        margin-top: 16px;
+        margin-left: 0;
+    }
 `;
 
 const Paragraph = styled.p`
-    color: ${WHITE};
-    font-size: 16px;
+    color: ${COLORS.WHITE};
+    font-size: 18px;
     line-height: 1.6;
     margin-top: 16px;
 
@@ -33,11 +40,9 @@ export const Header = () => {
             <HeaderWrapper>
                 <ProfilePicture />
                 <Right>
-                    <Headline as="h1" color={COLORS.WHITE}>
-                        Jonas Reitmann
-                    </Headline>
+                    <Headline as="h1">Jonas Reitmann</Headline>
 
-                    <Spacer space="sm" />
+                    <Spacer space="xs" />
 
                     <Paragraph>
                         Hey there, I am Jonas, a software engineer living and
