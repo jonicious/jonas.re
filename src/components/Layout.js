@@ -28,8 +28,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Spaced = styled.div`
-    margin-top: 96px;
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 `;
 
 export const Layout = ({ children }) => (
