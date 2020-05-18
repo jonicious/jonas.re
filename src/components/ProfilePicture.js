@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import profileImageUrl from './2018-quadratisch.jpg';
 
 const Image = styled.img`
+    width: 144px;
+    height: 144px;
     border-radius: 100%;
 `;
 
