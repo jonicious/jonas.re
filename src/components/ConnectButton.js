@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { WHITE, BLACK } from './colors';
 
-export const ConnectButton = styled.a`
+export const ConnectButton = styled.a.attrs({
+    target: '_blank'
+})`
     padding: 18px 36px;
     border-radius: 4px;
     text-decoration: none;
