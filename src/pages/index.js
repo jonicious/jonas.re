@@ -36,10 +36,13 @@ const IndexPage = () => (
             <Reveal animation={Animation.FadeInUp}>
                 <Workplace headline="Closelink (since 07/19)">
                     <Paragraph>
-                        Closelink is a startup in the maritime industry founded
-                        and based in Hamburg. As a Full Stack engineer my role
-                        is to plan and develop software thinking about both our
-                        needs in the backend as well as our frontend.
+                        <ExternalLink to="https://www.closelink.net/">
+                            Closelink
+                        </ExternalLink>{' '}
+                        is a startup in the maritime industry founded and based
+                        in Hamburg. As a Full Stack engineer my role is to plan
+                        and develop software thinking about both our needs in
+                        the backend as well as our frontend.
                     </Paragraph>
 
                     <Paragraph>
@@ -72,10 +75,14 @@ const IndexPage = () => (
             <Reveal animation={Animation.FadeInUp}>
                 <Workplace headline="FREE NOW (formerly mytaxi) (08/14 - 06/19)">
                     <Paragraph>
-                        I joined FREE NOW as an apprentice directly after I did
-                        my A levels (Abitur). It was very exciting learning
-                        about the internals of an app I used as a customer on a
-                        regular basis.
+                        I joined{' '}
+                        <ExternalLink to="https://free-now.com/">
+                            FREE NOW
+                        </ExternalLink>{' '}
+                        as an apprentice directly after I did my A levels
+                        (Abitur). It was very exciting learning about the
+                        internals of an app I used as a customer on a regular
+                        basis.
                     </Paragraph>
                     <Paragraph>
                         During my time, we grew from ~150 to ~1000 employees
@@ -84,13 +91,17 @@ const IndexPage = () => (
                         the B2B team. This area gained more and more focus.
                     </Paragraph>
                     <Paragraph>
-                        As B2B was an area that did not have much priority in
-                        recent years before, we had the chance to restructure
-                        and refactor huge parts while building many new features
-                        in different tools. It was very exciting to see the
+                        As{' '}
+                        <ExternalLink to="https://free-now.com/uk/business/account/">
+                            B2B
+                        </ExternalLink>{' '}
+                        was an area that did not have much priority in recent
+                        years before, we had the chance to restructure and
+                        refactor huge parts while building many new features in
+                        different tools. It was very exciting to see the
                         platform grow, integrate with many large corporations
                         and improve internal processes. When I left, the B2B
-                        team grew from four members to about 20.
+                        development team grew from four members to about 20.
                     </Paragraph>
                 </Workplace>
             </Reveal>
@@ -106,11 +117,17 @@ const IndexPage = () => (
                         deepen your knowledge as well.
                     </Paragraph>
                     <Paragraph>
-                        Hamburg Coding School provides a safe learning
-                        environment for everyone to learn everything from HTML,
-                        CSS to JavaScript to React. My role is to teach the
-                        different topics to students, answer project questions
-                        and mentor students.
+                        <ExternalLink to="https://hamburgcodingschool.com/en/">
+                            Hamburg Coding School
+                        </ExternalLink>{' '}
+                        provides a safe learning environment for everyone to
+                        learn everything from HTML, CSS to JavaScript to React.
+                        My role is to teach the different topics to students,
+                        answer project questions and{' '}
+                        <ExternalLink to="https://hamburgcodingschool.com/en/mentoring/">
+                            mentor students
+                        </ExternalLink>
+                        .
                     </Paragraph>
                 </Project>
             </Reveal>
@@ -131,18 +148,23 @@ const IndexPage = () => (
                         impact your changes have.
                     </Paragraph>
                     <Paragraph>
-                        When I visited in a friend in Berlin, we went to a
+                        When I visited a friend in Berlin, we went to a
                         CSSclasses meetup. I came back numerous times and
                         thought, it would be great to have the same event in
-                        Hamburg. CSSclasses is an all-day event where people can
-                        learn HTML & CSS and ask different coaches for advice.
+                        Hamburg.{' '}
+                        <ExternalLink to="https://cssclass.es/">
+                            CSSclasses
+                        </ExternalLink>{' '}
+                        is an all-day event where people can learn HTML & CSS
+                        and ask different coaches for advice.
                     </Paragraph>
                     <Paragraph>
-                        After talking to different people, we did the first one
-                        in May 2016 followed by many more. It was always fun
-                        creating a space where people could just come around,
-                        learn and experiment and have something to eat and drink
-                        for free.
+                        I thought, it would be cool to have the same event in
+                        Hamburg. Luckily, other people thought so too and we
+                        organized the first one in May 2016 followed by many
+                        more. It was always fun creating a space where people
+                        could just come around, learn, experiment and have
+                        something to eat and drink for free.
                     </Paragraph>
                 </Project>
             </Reveal>

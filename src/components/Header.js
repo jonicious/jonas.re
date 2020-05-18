@@ -46,8 +46,11 @@ export const Header = () => {
 
                     <Paragraph>
                         Hey there, I am Jonas, a software engineer living and
-                        working in Hamburg, Germany at Closelink, a technology
-                        company in the maritime industry.
+                        working in Hamburg, Germany at{' '}
+                        <ExternalLink to="https://www.closelink.net/">
+                            Closelink
+                        </ExternalLink>
+                        , a technology company in the maritime industry.
                     </Paragraph>
 
                     <Spacer space="md" />
