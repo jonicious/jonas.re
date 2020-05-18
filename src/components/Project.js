@@ -1,13 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { Spacer } from './index';
-
-const Headline2 = styled.h3`
-    font-weight: 600;
-    font-size: 20px;
-`;
+import { Spacer, Headline2 } from './index';
 
 export const Project = ({ headline, children }) => {
     return (

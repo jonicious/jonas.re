@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ProfilePicture } from './ProfilePicture';
-import { Headline } from './Headline';
-import { COLORS, ExternalLink, LinkList, Spacer } from './index';
+import {
+    ExternalLink,
+    LinkList,
+    Spacer,
+    Paragraph,
+    Headline,
+    ProfilePicture
+} from './index';
 
 const HeaderWrapper = styled.div`
     display: flex;
@@ -20,17 +25,6 @@ const Right = styled.div`
     @media screen and (max-width: 600px) {
         margin-top: 16px;
         margin-left: 0;
-    }
-`;
-
-const Paragraph = styled.p`
-    color: ${COLORS.WHITE};
-    font-size: 18px;
-    line-height: 1.6;
-    margin-top: 16px;
-
-    &:first-of-type {
-        margin-top: 0;
     }
 `;
 

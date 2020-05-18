@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { WHITE } from './colors';
+import { COLORS } from './index';
 
 const LinkListItem = styled.li`
-    color: ${WHITE};
+    color: ${COLORS.WHITE};
     display: inline-block;
     margin-right: 32px;
     font-size: 18px;
