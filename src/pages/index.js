@@ -169,10 +169,13 @@ const IndexPage = () => (
                     <Paragraph>
                         I thought, it would be cool to have the same event in
                         Hamburg. Luckily, other people thought so too and we
-                        organized the first one in May 2016 followed by many
-                        more. It was always fun creating a space where people
-                        could just come around, learn, experiment and have
-                        something to eat and drink for free.
+                        organized the{' '}
+                        <ExternalLink to="https://www.meetup.com/de-DE/opentechschool-hamburg/events/229290647/">
+                            first one in May 2016
+                        </ExternalLink>{' '}
+                        followed by many more. It was always fun creating a
+                        space where people could just come around, learn,
+                        experiment and have something to eat and drink for free.
                     </Paragraph>
                 </Showcase>
             </Reveal>
