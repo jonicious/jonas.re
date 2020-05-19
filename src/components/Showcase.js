@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Spacer, Headline } from './index';
+import { Spacer, Headline2, COLORS } from './index';
 
-const Label = styled.span`
-    background: #4e4f50;
+const Label = styled.h3`
+    background: ${COLORS.GREY};
+    font-weight: 400;
+    font-size: 16px;
     color: white;
     padding: 5px 8px 4px 8px;
     border-radius: 4px;
@@ -30,7 +32,7 @@ export const Showcase = ({ headline, children, type }) => {
         <React.Fragment>
             <Wrap>
                 <Label type={type}>{label}</Label>
-                <Headline as="h2">{headline}</Headline>
+                <Headline2>{headline}</Headline2>
             </Wrap>
 
             <Spacer space="sm" />

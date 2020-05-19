@@ -6,7 +6,7 @@ import {
     LinkList,
     Spacer,
     Paragraph,
-    Headline,
+    Headline1,
     ProfilePicture
 } from './index';
 
@@ -34,7 +34,7 @@ export const Header = () => {
             <HeaderWrapper>
                 <ProfilePicture />
                 <Right>
-                    <Headline as="h1">Jonas Reitmann</Headline>
+                    <Headline1>Jonas Reitmann</Headline1>
 
                     <Spacer space="xs" />
 
