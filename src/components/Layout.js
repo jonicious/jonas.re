@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     
     a {
         color: inherit;
-        text-decoration: underline;
+        text-decoration: none;
     }
 `;
 
