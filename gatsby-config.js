@@ -9,6 +9,14 @@ module.exports = {
     plugins: [
         'gatsby-plugin-styled-components',
         'gatsby-plugin-react-helmet',
-        'gatsby-plugin-eslint'
+        'gatsby-plugin-eslint',
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/src/posts`,
+                name: `posts`
+            }
+        },
+        `gatsby-plugin-mdx`
     ]
 };

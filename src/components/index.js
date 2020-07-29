@@ -12,5 +12,6 @@ export { Showcase } from './Showcase';
 export { ConnectButton } from './ConnectButton';
 export { Header } from './Header';
 export { Spacer } from './Spacer';
+export { ContentWrapper } from './ContentWrapper';
 
 export { COLORS };

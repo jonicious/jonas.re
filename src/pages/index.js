@@ -11,14 +11,9 @@ import {
     Paragraph,
     SEO,
     Spacer,
-    Showcase
+    Showcase,
+    ContentWrapper
 } from '../components';
-
-const ContentWrapper = styled.div`
-    max-width: 700px;
-    width: 90%;
-    margin: 0 auto;
-`;
 
 const ButtonWrapper = styled.div`
     text-align: center;
