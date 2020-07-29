@@ -1,9 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import { Animation } from 'react-genie-styled-components';
+import { Reveal } from 'react-genie';
+import { MDXProvider } from '@mdx-js/react';
+
 import { Layout } from './Layout';
 import { ContentWrapper } from './ContentWrapper';
-import { MDXProvider } from '@mdx-js/react';
 import { Headline2 } from './Headline2';
 import { Paragraph } from './Paragraph';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
@@ -44,9 +47,11 @@ export default function PostTemplate({
 
                 <Spacer space="lg" />
 
-                <Headline1>{frontmatter.title}</Headline1>
+                <Reveal animation={Animation.FadeInUp}>
+                    <Headline1>{frontmatter.title}</Headline1>
 
-                <WrittenTextContent content={body} />
+                    <WrittenTextContent content={body} />
+                </Reveal>
             </ContentWrapper>
         </Layout>
     );
