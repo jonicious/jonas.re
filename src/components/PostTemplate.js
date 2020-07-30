@@ -10,6 +10,7 @@ import { Header } from './Header';
 import { Spacer } from './Spacer';
 import { Showcase } from './Showcase';
 import { WrittenTextContent } from './WrittenTextContent';
+import { SEO } from './SEO';
 
 export default function PostTemplate({ data }) {
     const { mdx } = data;
@@ -25,6 +26,8 @@ export default function PostTemplate({ data }) {
     return (
         <Layout>
             <ContentWrapper>
+                <SEO description={frontmatter.shareText} />
+
                 <Header />
 
                 <Spacer space="lg" />
@@ -55,6 +58,7 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 date
+                shareText
             }
         }
     }
