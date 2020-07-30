@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import {
     ExternalLink,
@@ -28,11 +29,19 @@ const Right = styled.div`
     }
 `;
 
+const Left = styled.div`
+    flex-shrink: 0;
+`;
+
 export const Header = () => {
     return (
         <React.Fragment>
             <HeaderWrapper>
-                <ProfilePicture />
+                <Left>
+                    <Link to="/">
+                        <ProfilePicture />
+                    </Link>
+                </Left>
                 <Right>
                     <Headline1>Jonas Reitmann</Headline1>
 
