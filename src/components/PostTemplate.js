@@ -4,22 +4,44 @@ import PropTypes from 'prop-types';
 import { Animation } from 'react-genie-styled-components';
 import { Reveal } from 'react-genie';
 import { MDXProvider } from '@mdx-js/react';
+import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { ContentWrapper } from './ContentWrapper';
 import { Headline2 } from './Headline2';
+import { Headline3 as OriginalHeadline3 } from './Headline3';
 import { Paragraph } from './Paragraph';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Header } from './Header';
 import { Spacer } from './Spacer';
-import { Headline1 } from './Headline1';
+import { Showcase } from './Showcase';
+import { GREY } from './colors';
+import { ExternalLink } from './ExternalLink';
+
+const Headline3 = styled(OriginalHeadline3)`
+    margin: 24px 0;
+`;
+
+const Hr = styled.hr`
+    border: 1px solid ${GREY};
+    margin: 32px 0;
+`;
+
+const Link = ({ href, ...rest }) => <ExternalLink to={href} {...rest} />;
+
+Link.propTypes = {
+    href: PropTypes.string
+};
 
 const WrittenTextContent = ({ content, children }) => {
     return (
         <MDXProvider
             components={{
                 h2: Headline2,
-                p: Paragraph
+                h3: Headline3,
+                p: Paragraph,
+                hr: Hr,
+                a: Link
             }}
         >
             <article>
@@ -40,6 +62,14 @@ export default function PostTemplate({
 }) {
     const { mdx } = data;
     const { frontmatter, body } = mdx;
+
+    const date = new Date(frontmatter.date);
+    const formattedDate = new Intl.DateTimeFormat('de-DE', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    }).format(date);
+
     return (
         <Layout>
             <ContentWrapper>
@@ -48,9 +78,13 @@ export default function PostTemplate({
                 <Spacer space="lg" />
 
                 <Reveal animation={Animation.FadeInUp}>
-                    <Headline1>{frontmatter.title}</Headline1>
-
-                    <WrittenTextContent content={body} />
+                    <Showcase
+                        headline={frontmatter.title}
+                        type="article"
+                        label={formattedDate}
+                    >
+                        <WrittenTextContent content={body} />
+                    </Showcase>
                 </Reveal>
             </ContentWrapper>
         </Layout>
@@ -68,6 +102,7 @@ export const pageQuery = graphql`
             body
             frontmatter {
                 title
+                date
             }
         }
     }

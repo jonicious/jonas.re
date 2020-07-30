@@ -1,8 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { Spacer, Headline2, COLORS } from './index';
+
+const leftStyles = props => {
+    switch (props.type) {
+        case 'work': {
+            return css`
+                margin-left: -70px;
+            `;
+        }
+        case 'side-project': {
+            return css`
+                margin-left: -114px;
+            `;
+        }
+        case 'article': {
+            return css`
+                margin-left: -114px;
+            `;
+        }
+        default:
+            return '';
+    }
+};
 
 const Label = styled.h3`
     background: ${COLORS.GREY};
@@ -12,7 +34,7 @@ const Label = styled.h3`
     padding: 5px 8px 4px 8px;
     border-radius: 4px;
     position: absolute;
-    left: ${props => (props.type === 'work' ? '-70px' : '-114px')};
+    ${leftStyles};
 
     @media screen and (max-width: 1024px) {
         top: -40px;
@@ -25,9 +47,7 @@ const Wrap = styled.div`
     align-items: center;
 `;
 
-export const Showcase = ({ headline, children, type }) => {
-    const label = type === 'work' ? 'Work' : 'Side project';
-
+export const Showcase = ({ headline, children, type, label }) => {
     return (
         <React.Fragment>
             <Wrap>
@@ -43,6 +63,7 @@ export const Showcase = ({ headline, children, type }) => {
 
 Showcase.propTypes = {
     headline: PropTypes.string,
-    type: PropTypes.oneOf(['work', 'side-project']),
+    type: PropTypes.oneOf(['work', 'side-project', 'article']),
+    label: PropTypes.string,
     children: PropTypes.node
 };

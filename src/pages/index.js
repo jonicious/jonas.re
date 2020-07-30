@@ -28,7 +28,11 @@ const IndexPage = () => (
             <Spacer space="lg" />
 
             <Reveal animation={Animation.FadeInUp}>
-                <Showcase headline="Closelink (since 07/19)" type="work">
+                <Showcase
+                    headline="Closelink (since 07/19)"
+                    type="work"
+                    label="Work"
+                >
                     <Paragraph>
                         <ExternalLink to="https://www.closelink.net/">
                             Closelink
@@ -70,6 +74,7 @@ const IndexPage = () => (
                 <Showcase
                     headline="FREE NOW (formerly mytaxi) (08/14 - 06/19)"
                     type="work"
+                    label="Work"
                 >
                     <Paragraph>
                         I joined{' '}
@@ -105,10 +110,11 @@ const IndexPage = () => (
 
             <Spacer space="lg" />
 
-            <Reveal animation={Animation.FadeInUp} label="Side Project">
+            <Reveal animation={Animation.FadeInUp}>
                 <Showcase
                     headline="Hamburg Coding School (since 2019)"
                     type="side-project"
+                    label="Side Project"
                 >
                     <Paragraph>
                         One of my passions is to spread my knowledge to others.
@@ -138,6 +144,7 @@ const IndexPage = () => (
                 <Showcase
                     headline="CSSclasses (since 2016)"
                     type="side-project"
+                    label="Side Project"
                 >
                     <Paragraph>
                         I believe that education should be available for
