@@ -28,6 +28,15 @@ export const SEO = ({ description, lang, meta, title }) => {
         `
     );
 
+    const makeTitle = () => {
+        if (!title) {
+            return site.siteMetadata.title;
+        }
+
+        return `${title} | ${site.siteMetadata.title}`;
+    };
+
+    const metaTitle = makeTitle();
     const metaDescription = description || site.siteMetadata.description;
 
     const image = `${site.siteMetadata.siteUrl}${profileImageUrl}`;
@@ -37,7 +46,7 @@ export const SEO = ({ description, lang, meta, title }) => {
             htmlAttributes={{
                 lang
             }}
-            title={site.siteMetadata.title}
+            title={metaTitle}
             meta={[
                 {
                     name: 'image',
@@ -49,7 +58,7 @@ export const SEO = ({ description, lang, meta, title }) => {
                 },
                 {
                     property: `og:title`,
-                    content: title
+                    content: metaTitle
                 },
                 {
                     property: `og:description`,
@@ -74,7 +83,7 @@ export const SEO = ({ description, lang, meta, title }) => {
                 },
                 {
                     name: `twitter:title`,
-                    content: title
+                    content: metaTitle
                 },
                 {
                     name: `twitter:description`,

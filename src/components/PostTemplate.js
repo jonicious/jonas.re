@@ -26,7 +26,10 @@ export default function PostTemplate({ data }) {
     return (
         <Layout>
             <ContentWrapper>
-                <SEO description={frontmatter.shareText} />
+                <SEO
+                    description={frontmatter.shareText}
+                    title={frontmatter.title}
+                />
 
                 <Header />
 
