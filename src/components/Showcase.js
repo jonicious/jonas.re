@@ -9,16 +9,22 @@ const leftStyles = props => {
         case 'work': {
             return css`
                 margin-left: -70px;
+
+                @media screen and (max-width: 1024px) {
+                    top: -40px;
+                    left: 70px;
+                }
             `;
         }
-        case 'side-project': {
-            return css`
-                margin-left: -114px;
-            `;
-        }
+        case 'side-project':
         case 'article': {
             return css`
                 margin-left: -114px;
+
+                @media screen and (max-width: 1024px) {
+                    top: -40px;
+                    left: 114px;
+                }
             `;
         }
         default:
@@ -35,11 +41,6 @@ const Label = styled.h3`
     border-radius: 4px;
     position: absolute;
     ${leftStyles};
-
-    @media screen and (max-width: 1024px) {
-        top: -40px;
-        left: 0;
-    }
 `;
 
 const Wrap = styled.div`
