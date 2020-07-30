@@ -3,63 +3,15 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Animation } from 'react-genie-styled-components';
 import { Reveal } from 'react-genie';
-import { MDXProvider } from '@mdx-js/react';
-import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { ContentWrapper } from './ContentWrapper';
-import { Headline2 } from './Headline2';
-import { Headline3 as OriginalHeadline3 } from './Headline3';
-import { Paragraph } from './Paragraph';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Header } from './Header';
 import { Spacer } from './Spacer';
 import { Showcase } from './Showcase';
-import { GREY } from './colors';
-import { ExternalLink } from './ExternalLink';
+import { WrittenTextContent } from './WrittenTextContent';
 
-const Headline3 = styled(OriginalHeadline3)`
-    margin: 24px 0;
-`;
-
-const Hr = styled.hr`
-    border: 1px solid ${GREY};
-    margin: 32px 0;
-`;
-
-const Link = ({ href, ...rest }) => <ExternalLink to={href} {...rest} />;
-
-Link.propTypes = {
-    href: PropTypes.string
-};
-
-const WrittenTextContent = ({ content, children }) => {
-    return (
-        <MDXProvider
-            components={{
-                h2: Headline2,
-                h3: Headline3,
-                p: Paragraph,
-                hr: Hr,
-                a: Link
-            }}
-        >
-            <article>
-                {children}
-                <MDXRenderer>{content}</MDXRenderer>
-            </article>
-        </MDXProvider>
-    );
-};
-
-WrittenTextContent.propTypes = {
-    content: PropTypes.string,
-    children: PropTypes.node
-};
-
-export default function PostTemplate({
-    data // this prop will be injected by the GraphQL query below.
-}) {
+export default function PostTemplate({ data }) {
     const { mdx } = data;
     const { frontmatter, body } = mdx;
 
