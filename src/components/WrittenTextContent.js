@@ -16,7 +16,7 @@ Link.propTypes = {
 };
 
 const Headline3 = styled(OriginalHeadline3)`
-    margin: 24px 0;
+    margin: 24px 0 16px 0;
 `;
 
 const Hr = styled.hr`
