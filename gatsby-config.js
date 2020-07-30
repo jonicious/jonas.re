@@ -4,7 +4,7 @@ module.exports = {
         description:
             'I am Jonas, a software engineer living and working in Hamburg, Germany at Closelink, a technology company in the maritime industry.',
         author: '@jonicious',
-        siteUrl: 'https://playground.jonas.re'
+        siteUrl: 'https://jonas.re'
     },
     plugins: [
         'gatsby-plugin-styled-components',
