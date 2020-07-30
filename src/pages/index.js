@@ -5,7 +5,7 @@ import { Animation } from 'react-genie-styled-components';
 
 import {
     ConnectButton,
-    ExternalLink,
+    Link,
     Header,
     Layout,
     Paragraph,
@@ -34,9 +34,7 @@ const IndexPage = () => (
                     label="Work"
                 >
                     <Paragraph>
-                        <ExternalLink to="https://www.closelink.net/">
-                            Closelink
-                        </ExternalLink>{' '}
+                        <Link to="https://www.closelink.net/">Closelink</Link>{' '}
                         is a startup in the maritime industry founded and based
                         in Hamburg. As a Full Stack engineer my role is to plan
                         and develop software thinking about both our needs in
@@ -60,9 +58,9 @@ const IndexPage = () => (
                         In April 2020, we launched a new website entirely
                         rewritten using Gatsby, React and styled-components.
                         Learn more about{' '}
-                        <ExternalLink to="https://www.closelink.net/news/website-case-study/">
+                        <Link to="https://www.closelink.net/news/website-case-study/">
                             here
-                        </ExternalLink>
+                        </Link>
                         .
                     </Paragraph>
                 </Showcase>
@@ -78,13 +76,10 @@ const IndexPage = () => (
                 >
                     <Paragraph>
                         I joined{' '}
-                        <ExternalLink to="https://free-now.com/">
-                            FREE NOW
-                        </ExternalLink>{' '}
-                        as an apprentice directly after I did my A levels
-                        (Abitur). It was very exciting learning about the
-                        internals of an app I used as a customer on a regular
-                        basis.
+                        <Link to="https://free-now.com/">FREE NOW</Link> as an
+                        apprentice directly after I did my A levels (Abitur). It
+                        was very exciting learning about the internals of an app
+                        I used as a customer on a regular basis.
                     </Paragraph>
                     <Paragraph>
                         During my time, we grew from ~150 to ~1000 employees
@@ -94,9 +89,9 @@ const IndexPage = () => (
                     </Paragraph>
                     <Paragraph>
                         As{' '}
-                        <ExternalLink to="https://free-now.com/uk/business/account/">
+                        <Link to="https://free-now.com/uk/business/account/">
                             B2B
-                        </ExternalLink>{' '}
+                        </Link>{' '}
                         was an area that did not have much priority in recent
                         years before, we had the chance to restructure and
                         refactor huge parts while building many new features in
@@ -123,16 +118,16 @@ const IndexPage = () => (
                         deepen your knowledge as well.
                     </Paragraph>
                     <Paragraph>
-                        <ExternalLink to="https://hamburgcodingschool.com/en/">
+                        <Link to="https://hamburgcodingschool.com/en/">
                             Hamburg Coding School
-                        </ExternalLink>{' '}
+                        </Link>{' '}
                         provides a safe learning environment for everyone to
                         learn everything from HTML, CSS to JavaScript to React.
                         My role is to teach the different topics to students,
                         answer project questions and{' '}
-                        <ExternalLink to="https://hamburgcodingschool.com/en/mentoring/">
+                        <Link to="https://hamburgcodingschool.com/en/mentoring/">
                             mentor students
-                        </ExternalLink>
+                        </Link>
                         .
                     </Paragraph>
                 </Showcase>
@@ -162,19 +157,17 @@ const IndexPage = () => (
                         CSSclasses meetup. I came back numerous times and
                         thought, it would be great to have the same event in
                         Hamburg.{' '}
-                        <ExternalLink to="https://cssclass.es/">
-                            CSSclasses
-                        </ExternalLink>{' '}
-                        is an all-day event where people can learn HTML & CSS
-                        and ask different coaches for advice.
+                        <Link to="https://cssclass.es/">CSSclasses</Link> is an
+                        all-day event where people can learn HTML & CSS and ask
+                        different coaches for advice.
                     </Paragraph>
                     <Paragraph>
                         I thought, it would be cool to have the same event in
                         Hamburg. Luckily, other people thought so too and we
                         organized the{' '}
-                        <ExternalLink to="https://www.meetup.com/de-DE/opentechschool-hamburg/events/229290647/">
+                        <Link to="https://www.meetup.com/de-DE/opentechschool-hamburg/events/229290647/">
                             first one in May 2016
-                        </ExternalLink>{' '}
+                        </Link>{' '}
                         followed by many more. It was always fun creating a
                         space where people could just come around, learn,
                         experiment and have something to eat and drink for free.

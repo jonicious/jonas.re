@@ -5,11 +5,11 @@ import { MDXProvider } from '@mdx-js/react';
 import styled from 'styled-components';
 
 import { Paragraph } from './Paragraph';
-import { ExternalLink } from './ExternalLink';
+import { Link as OriginalLink } from './Link';
 import { Headline3 as OriginalHeadline3 } from './Headline3';
 import { GREY } from './colors';
 
-const Link = ({ href, ...rest }) => <ExternalLink to={href} {...rest} />;
+const Link = ({ href, ...rest }) => <OriginalLink to={href} {...rest} />;
 
 Link.propTypes = {
     href: PropTypes.string

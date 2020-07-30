@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+
+import { Link as GatsbyLink } from 'gatsby';
 
 import {
-    ExternalLink,
+    Link,
     LinkList,
     Spacer,
     Paragraph,
@@ -38,9 +39,9 @@ export const Header = () => {
         <React.Fragment>
             <HeaderWrapper>
                 <Left>
-                    <Link to="/">
+                    <GatsbyLink to="/">
                         <ProfilePicture />
-                    </Link>
+                    </GatsbyLink>
                 </Left>
                 <Right>
                     <Headline1>Jonas Reitmann</Headline1>
@@ -50,27 +51,24 @@ export const Header = () => {
                     <Paragraph>
                         Hey there, I am Jonas, a software engineer living and
                         working in Hamburg, Germany at{' '}
-                        <ExternalLink to="https://www.closelink.net/">
-                            Closelink
-                        </ExternalLink>
-                        , a technology company in the maritime industry.
+                        <Link to="https://www.closelink.net/">Closelink</Link>,
+                        a technology company in the maritime industry. Read my
+                        latest blog post{' '}
+                        <Link to="/posts/dev-critiques" external={false}>
+                            here
+                        </Link>
+                        !
                     </Paragraph>
 
                     <Spacer space="md" />
 
                     <LinkList>
-                        <ExternalLink to="https://www.linkedin.com/in/jonas-reitmann-5aa92a15a/">
+                        <Link to="https://www.linkedin.com/in/jonas-reitmann-5aa92a15a/">
                             LinkedIn
-                        </ExternalLink>
-                        <ExternalLink to="https://github.com/jonicious">
-                            Github
-                        </ExternalLink>
-                        <ExternalLink to="https://twitter.com/jonicious">
-                            Twitter
-                        </ExternalLink>
-                        <ExternalLink to="mailto:jonas@reitmann.me">
-                            E-Mail
-                        </ExternalLink>
+                        </Link>
+                        <Link to="https://github.com/jonicious">Github</Link>
+                        <Link to="https://twitter.com/jonicious">Twitter</Link>
+                        <Link to="mailto:jonas@reitmann.me">E-Mail</Link>
                     </LinkList>
                 </Right>
             </HeaderWrapper>
