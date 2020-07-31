@@ -5,8 +5,6 @@ import { Animation } from 'react-genie-styled-components';
 import { Reveal } from 'react-genie';
 
 import { Layout } from './Layout';
-import { ContentWrapper } from './ContentWrapper';
-import { Header } from './Header';
 import { Spacer } from './Spacer';
 import { Showcase } from './Showcase';
 import { WrittenTextContent } from './WrittenTextContent';
@@ -25,26 +23,21 @@ export default function PostTemplate({ data }) {
 
     return (
         <Layout>
-            <ContentWrapper>
-                <SEO
-                    description={frontmatter.shareText}
-                    title={frontmatter.title}
-                />
+            <SEO
+                description={frontmatter.shareText}
+                title={frontmatter.title}
+            />
+            <Spacer space="lg" />
 
-                <Header />
-
-                <Spacer space="lg" />
-
-                <Reveal animation={Animation.FadeInUp}>
-                    <Showcase
-                        headline={frontmatter.title}
-                        type="article"
-                        label={formattedDate}
-                    >
-                        <WrittenTextContent content={body} />
-                    </Showcase>
-                </Reveal>
-            </ContentWrapper>
+            <Reveal animation={Animation.FadeInUp}>
+                <Showcase
+                    headline={frontmatter.title}
+                    type="article"
+                    label={formattedDate}
+                >
+                    <WrittenTextContent content={body} />
+                </Showcase>
+            </Reveal>
         </Layout>
     );
 }
