@@ -10,8 +10,8 @@ const Image = styled.img`
 export const ProfilePicture = () => {
     return (
         <Image
-            height={144}
-            width={144}
+            height={128}
+            width={128}
             loading="lazy"
             src={profileImageUrl}
             alt="Picture of Jonas Reitmann"
