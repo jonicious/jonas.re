@@ -17,6 +17,31 @@ module.exports = {
                 name: `posts`
             }
         },
-        `gatsby-plugin-mdx`
+        `gatsby-plugin-sharp`,
+        {
+            // There is a bug in gatsby-remark-images
+            // Because of this, we add configure the plugin twice.
+            // https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-510153237
+
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1000
+                        }
+                    }
+                ],
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1000
+                        }
+                    }
+                ]
+            }
+        }
     ]
 };
