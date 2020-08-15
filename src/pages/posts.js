@@ -8,6 +8,7 @@ import {
     Layout,
     Link,
     Paragraph,
+    SEO,
     Showcase,
     Spacer
 } from '../components';
@@ -15,6 +16,8 @@ import {
 const Posts = ({ data }) => {
     return (
         <Layout>
+            <SEO />
+
             <Spacer space="lg" />
 
             {data.allMdx.edges.map(edge => {
