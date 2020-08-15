@@ -53,8 +53,8 @@ export const Header = () => {
                         working in Hamburg, Germany at{' '}
                         <Link to="https://www.closelink.net/">Closelink</Link>,
                         a technology company in the maritime industry. Read my
-                        latest blog post{' '}
-                        <Link to="/posts/dev-critiques" external={false}>
+                        blog posts{' '}
+                        <Link to="/posts" external={false}>
                             here
                         </Link>
                         !

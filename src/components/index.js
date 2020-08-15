@@ -13,5 +13,6 @@ export { ConnectButton } from './ConnectButton';
 export { Header } from './Header';
 export { Spacer } from './Spacer';
 export { ContentWrapper } from './ContentWrapper';
+export { FormattedDate } from './FormattedDate';
 
 export { COLORS };

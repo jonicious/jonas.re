@@ -9,17 +9,11 @@ import { Spacer } from './Spacer';
 import { Showcase } from './Showcase';
 import { WrittenTextContent } from './WrittenTextContent';
 import { SEO } from './SEO';
+import { FormattedDate } from './FormattedDate';
 
 export default function PostTemplate({ data }) {
     const { mdx } = data;
     const { frontmatter, body } = mdx;
-
-    const date = new Date(frontmatter.date);
-    const formattedDate = new Intl.DateTimeFormat('de-DE', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    }).format(date);
 
     return (
         <Layout>
@@ -33,7 +27,7 @@ export default function PostTemplate({ data }) {
                 <Showcase
                     headline={frontmatter.title}
                     type="article"
-                    label={formattedDate}
+                    label={<FormattedDate date={new Date(frontmatter.date)} />}
                 >
                     <WrittenTextContent content={body} />
                 </Showcase>

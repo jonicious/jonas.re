@@ -63,8 +63,8 @@ export const Showcase = ({ headline, children, type, label }) => {
 };
 
 Showcase.propTypes = {
-    headline: PropTypes.string,
+    headline: PropTypes.node,
     type: PropTypes.oneOf(['work', 'side-project', 'article']),
-    label: PropTypes.string,
+    label: PropTypes.node,
     children: PropTypes.node
 };
