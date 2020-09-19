@@ -1,0 +1,22 @@
+---
+slug: "/youtube-pip"
+date: "2020-09-19"
+title: "YouTube Picture in Picture on iOS without Premium"
+shareText: "Find out how you can use Picture in Picture for YouTube videos without paying for YouTube Premium!"
+---
+iOS 14 brought Picture in Picture support to the iPhone. Unfortunately, YouTube only supports PiP for YouTube Premium subscribers. It used to work without a YouTube Premium subscription using mobile Safari but [YouTube recently disabled this functionality](https://www.engadget.com/youtube-web-ios-14-picture-in-picture-video-stops-working-152016341.html).
+
+Good news: There is a simple workaround. I built a little website and iOS shortcut, so one can easily open a YouTube video in mobile Safari and then use PiP again! ✨ See it in action here.
+<br />
+
+<YouTube youTubeId="qmQMiiSXwJc" />
+
+[Download the shortcut here](https://www.icloud.com/shortcuts/730a5630db1b4c399648851568a9a7e4)
+
+### How does it work?
+
+The website accepts a URL parameter with a YouTube URL or video ID. It then shows an iFrame for the particular video. You can find the code [here](https://codesandbox.io/s/safari-youtube-pip-6d4uz?file=/src/index.js).
+
+The shortcut accepts a URL and then builds the needed URL for the website, e.g. [https://6d4uz.csb.app?v=https://www.youtube.com/watch?v=Obgnr9pc820](https://6d4uz.csb.app?v=https://www.youtube.com/watch?v=Obgnr9pc820). Thanks for the help with Shortcuts, [Philipp](http://knuspermagier.de/)!
+
+Let's hope, YouTube does not disable PiP for iFrames as well.

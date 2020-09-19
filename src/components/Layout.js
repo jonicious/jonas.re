@@ -52,7 +52,7 @@ export const Layout = ({ children }) => (
 
                 {children}
 
-                <Spacer space="lg" />
+                <Spacer space="xlg" />
 
                 <Reveal animation={Animation.FadeInUp}>
                     <ButtonWrapper>

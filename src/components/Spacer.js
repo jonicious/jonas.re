@@ -9,9 +9,9 @@ const spacing = props => {
         case 'md':
             return '32px';
         case 'lg':
-            return '120px';
+            return '70px';
         case 'xlg':
-            return '170px';
+            return '120px';
         default:
             return '0';
     }

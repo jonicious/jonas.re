@@ -7,6 +7,7 @@ module.exports = {
         siteUrl: 'https://jonas.re'
     },
     plugins: [
+        'gatsby-plugin-mdx-embed',
         'gatsby-plugin-styled-components',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-eslint',
