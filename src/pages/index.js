@@ -7,7 +7,7 @@ import { Link, Layout, Paragraph, SEO, Spacer, Showcase } from '../components';
 const IndexPage = () => (
     <Layout>
         <SEO />
-        <Spacer space="lg" />
+        <Spacer space="xlg" />
 
         <Reveal animation={Animation.FadeInUp}>
             <Showcase

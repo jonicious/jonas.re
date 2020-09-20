@@ -21,7 +21,7 @@ export default function PostTemplate({ data }) {
                 description={frontmatter.shareText}
                 title={frontmatter.title}
             />
-            <Spacer space="lg" />
+            <Spacer space="xlg" />
 
             <Reveal animation={Animation.FadeInUp}>
                 <Showcase

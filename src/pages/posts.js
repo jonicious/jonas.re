@@ -18,7 +18,7 @@ const Posts = ({ data }) => {
         <Layout>
             <SEO />
 
-            <Spacer space="lg" />
+            <Spacer space="xlg" />
 
             {data.allMdx.edges.map(edge => {
                 const post = edge.node;
