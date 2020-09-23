@@ -13,6 +13,7 @@ export const ConnectButton = styled.a.attrs({
     border: 2px solid ${WHITE};
     color: ${BLACK};
     transition: 80ms ease-in;
+    display: inline-block;
 
     &:hover {
         background: ${BLACK};
