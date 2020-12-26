@@ -87,6 +87,28 @@ const IndexPage = () => (
 
         <Reveal animation={Animation.FadeInUp}>
             <Showcase
+                headline="Hotspot or not?"
+                type="side-project"
+                label="Side Project"
+            >
+                <Paragraph>
+                    Corona is a topic that is relevant to everybody,
+                    unfortunately. Together with{' '}
+                    <Link to="https://seb.astian.eu/">Sebastian</Link> and{' '}
+                    <Link to="https://julianblohm.vercel.app/">Julian</Link> I
+                    built a site to quickly check whether you are in a risk area
+                    and which rules are in place for your location. It is now
+                    used and trusted by a couple thousands visitors every day to
+                    inform themselves. Check it out{' '}
+                    <Link to="https://hotspotornot.de/">here</Link>!
+                </Paragraph>
+            </Showcase>
+        </Reveal>
+
+        <Spacer space="lg" />
+
+        <Reveal animation={Animation.FadeInUp}>
+            <Showcase
                 headline="Hamburg Coding School (since 2019)"
                 type="side-project"
                 label="Side Project"
