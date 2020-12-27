@@ -98,9 +98,17 @@ const IndexPage = () => (
                     <Link to="https://julianblohm.vercel.app/">Julian</Link> I
                     built a site to quickly check whether you are in a risk area
                     and which rules are in place for your location. It is now
-                    used and trusted by a couple thousands visitors every day to
-                    inform themselves. Check it out{' '}
+                    used and trusted by many visitors every day to inform
+                    themselves. Check it out{' '}
                     <Link to="https://hotspotornot.de/">here</Link>!
+                </Paragraph>
+
+                <Paragraph>
+                    If you want to learn more about the project, there is a{' '}
+                    <Link external={false} to="/posts/hotspot-or-not">
+                        whole article
+                    </Link>{' '}
+                    about it.
                 </Paragraph>
             </Showcase>
         </Reveal>

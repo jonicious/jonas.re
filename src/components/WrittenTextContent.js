@@ -24,6 +24,18 @@ const Hr = styled.hr`
     margin: 32px 0;
 `;
 
+const Li = styled(Paragraph).attrs({
+    as: 'li'
+})`
+    list-style: disc;
+    margin-top: 8px;
+    margin-left: 20px;
+
+    &:first-of-type {
+        margin-top: 8px;
+    }
+`;
+
 export const WrittenTextContent = ({ content, children }) => {
     return (
         <MDXProvider
@@ -31,7 +43,8 @@ export const WrittenTextContent = ({ content, children }) => {
                 h3: Headline3,
                 p: Paragraph,
                 hr: Hr,
-                a: Link
+                a: Link,
+                li: Li
             }}
         >
             <article>
