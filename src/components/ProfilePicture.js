@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import profileImageUrl from './2018-quadratisch.jpg';
+import profileImageUrl from './jonas-reitmann.jpg';
 
 const Image = styled.img`
     max-width: 100%;
